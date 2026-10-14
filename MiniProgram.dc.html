@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="store.js"></script>
+<style>.mp-noscroll::-webkit-scrollbar{display:none}</style>
+</helmet>
+<div data-mini-root="1" style="position:relative;width:390px;height:844px;overflow:hidden;background:#ffffff;font-family:'Nunito',sans-serif;color:#000;-webkit-font-smoothing:antialiased;">
+
+  <!-- ============ TOKA SUPER APP HOME ============ -->
+  <sc-if value="{{ isToka }}" hint-placeholder-val="{{ true }}">
+    <div style="position:absolute;inset:0;background:#f4f6f8;overflow:hidden;">
+      <div style="position:absolute;left:0;top:-65px;width:390px;height:323px;background:#002a5e;border-radius:16px;"></div>
+      <img src="assets/p/tokalogo.png" alt="TOKA" style="position:absolute;left:19px;top:57px;width:100px;height:22px;object-fit:contain;">
+      <div style="position:absolute;left:16px;top:94px;width:52px;height:52px;border-radius:50%;background:#dbdbdb;box-shadow:inset 0 0 0 2px #fff;display:flex;align-items:center;justify-content:center;color:#fff;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" stroke="none"><circle cx="12" cy="8" r="5"></circle><path d="M3 22c0-5 4-8 9-8s9 3 9 8z"></path></svg>
+      </div>
+      <div style="position:absolute;left:281px;top:100px;width:39px;height:39px;border-radius:50%;background:#002a5e;box-shadow:inset 0 0 0 2px #fff;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px;">?</div>
+      <div style="position:absolute;left:331px;top:100px;width:39px;height:39px;border-radius:50%;background:#002a5e;box-shadow:inset 0 0 0 2px #fff;display:flex;align-items:center;justify-content:center;color:#fff;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+      </div>
+      <div style="position:absolute;left:360px;top:100px;width:13px;height:13px;border-radius:50%;background:#db8765;"></div>
+      <div style="position:absolute;left:17px;top:166px;color:#fff;font-weight:700;font-size:20px;">¡Hola, {{ userName }}!</div>
+      <div style="position:absolute;left:17px;top:192px;color:#fff;font-size:15px;">Lorem ipsum dolorsit amet</div>
+      <div style="position:absolute;left:17px;top:228px;width:241px;height:122px;background:#fff;border-radius:12px;box-shadow:0 4px 10px #e4e9ef;">
+        <div style="position:absolute;left:41px;top:12px;font-size:12px;font-weight:500;color:#002a5e;white-space:nowrap;">Lorem ipsum dolor sitamet</div>
+        <div style="position:absolute;left:65px;top:28px;font-size:20px;font-weight:800;color:#002a5e;">$10,000.00</div>
+        <div style="position:absolute;left:18px;top:64px;width:205px;height:1px;background:#dae3ec;"></div>
+        <div style="position:absolute;left:18px;top:76px;right:18px;display:flex;justify-content:space-between;font-size:12px;color:#002a5e;"><span style="font-weight:500;">Lorem</span><span style="font-weight:800;">$0.000</span></div>
+        <div style="position:absolute;left:18px;top:94px;right:18px;display:flex;justify-content:space-between;font-size:12px;color:#002a5e;"><span style="font-weight:500;">Lorem</span><span style="font-weight:800;">$0.000</span></div>
+      </div>
+      <div style="position:absolute;left:266px;top:228px;width:107px;height:122px;background:#fff;border-radius:12px;box-shadow:0 4px 10px #e4e9ef;display:flex;flex-direction:column;align-items:center;gap:8px;padding-top:12px;box-sizing:border-box;">
+        <div style="font-size:12px;font-weight:500;color:#002a5e;white-space:nowrap;">Mi QR</div>
+        <svg width="62" height="62" viewBox="0 0 24 24" fill="none" stroke="#002a5e" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><path d="M14 14h3v3h-3zM18 18h3v3h-3zM14 19h2M19 14h2"></path></svg>
+      </div>
+      <div style="position:absolute;left:17px;top:370px;width:356px;height:342px;background:#fff;border-radius:12px;box-shadow:0 4px 10px #e4e9ef;">
+        <div style="position:absolute;left:18px;top:12px;font-size:12px;font-weight:700;color:#002a5e;white-space:nowrap;">Mis apps favoritas</div>
+        <div style="position:absolute;left:18px;top:40px;display:grid;grid-template-columns:repeat(4,61px);column-gap:26px;row-gap:16px;">
+          <div data-hs="m.toka.app" onClick="{{ openSol }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;">
+            <div style="width:61px;height:56px;border-radius:8px;background:#eceff3;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px #fe8f09;"><img src="assets/p/sollogo.png" alt="Sol Travel" style="width:41px;height:38px;object-fit:contain;"></div>
+            <div style="font-size:12px;font-weight:500;color:#002a5e;white-space:nowrap;">Sol Travel</div>
+          </div>
+          <sc-for list="{{ tokaSlots }}" as="s" hint-placeholder-count="10">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:61px;height:56px;border-radius:8px;background:#bfcad7;"></div>
+              <div style="font-size:12px;font-weight:500;color:#002a5e;">Lorem</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="position:absolute;left:150px;bottom:24px;display:flex;gap:6px;align-items:center;"><div style="width:28px;height:8px;border-radius:4px;background:#002a5e;"></div><div style="width:9px;height:8px;border-radius:50%;background:#bfcad7;"></div><div style="width:9px;height:8px;border-radius:50%;background:#bfcad7;"></div></div>
+      </div>
+      <div style="position:absolute;left:16px;top:732px;width:357px;height:342px;background:#fff;border-radius:12px;box-shadow:0 4px 10px #e4e9ef;"></div>
+    </div>
+  </sc-if>
+
+  <!-- ============ INICIO ============ -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ false }}">
+    <div ref="{{ homeRef }}" class="mp-noscroll" style="position:absolute;left:0;top:0;right:0;bottom:84px;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;">
+      <div style="padding:70px 20px 0;display:flex;flex-direction:column;gap:10px;">
+        <img data-hs="m.home.logo" src="assets/p/sollogo.png" alt="Sol Travel" style="width:60px;height:60px;object-fit:contain;">
+        <div style="font-weight:900;font-size:28px;line-height:31.36px;letter-spacing:-0.4px;padding:7px 0;white-space:pre-line;">Tu próximo viaje
+empieza aquí</div>
+        <div style="font-weight:800;font-size:13px;color:rgba(0,0,0,.62);padding:10px 0 0;">Encuentra tu paquete</div>
+        <div style="display:flex;gap:10px;">
+          <div data-hs="m.home.dest" onClick="{{ openDestSheet }}" style="flex:1;height:56px;border-radius:16px;background:{{ destChipBg }};box-shadow:{{ destChipBd }};display:flex;align-items:center;gap:9px;padding:0 9px;cursor:pointer;min-width:0;">
+            <div style="width:38px;height:38px;border-radius:12px;background:{{ destIconBg }};color:{{ destIconFg }};display:flex;align-items:center;justify-content:center;flex:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px;min-width:0;">
+              <div style="font-weight:700;font-size:11px;color:rgba(0,0,0,.42);">Destino</div>
+              <div style="font-weight:900;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ destLabel }}</div>
+            </div>
+          </div>
+          <div data-hs="m.home.sort" onClick="{{ openSortSheet }}" style="flex:1;height:56px;border-radius:16px;background:{{ sortChipBg }};box-shadow:{{ sortChipBd }};display:flex;align-items:center;gap:9px;padding:0 9px;cursor:pointer;min-width:0;">
+            <div style="width:38px;height:38px;border-radius:12px;background:{{ sortIconBg }};color:{{ sortIconFg }};display:flex;align-items:center;justify-content:center;flex:none;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px;min-width:0;">
+              <div style="font-weight:700;font-size:11px;color:rgba(0,0,0,.42);">Ordenar</div>
+              <div style="font-weight:900;font-size:13.5px;white-space:nowrap;">{{ sortLabel }}</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;">
+          <div data-hs="m.home.clear" onClick="{{ clearFilters }}" style="height:32px;border-radius:999px;background:{{ clearBg }};box-shadow:{{ clearShadow }};color:{{ clearFg }};display:flex;align-items:center;gap:6px;padding:0 12px;font-weight:900;font-size:12.5px;cursor:pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+            Limpiar filtros
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{ homeSections }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-direction:column;gap:28px;padding:28px 0 28px;">
+          <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="3">
+            <div data-hs="{{ sec.hs }}" style="display:flex;flex-direction:column;gap:14px;">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:0 20px;">
+                <div style="display:flex;align-items:center;gap:10px;">
+                  <div style="width:34px;height:34px;border-radius:10px;background:{{ sec.iconBg }};color:#fff;display:flex;align-items:center;justify-content:center;">
+                    <sc-if value="{{ sec.isDest }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></sc-if>
+                    <sc-if value="{{ sec.isBest }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></sc-if>
+                    <sc-if value="{{ sec.isBlock }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></sc-if>
+                  </div>
+                  <div style="font-weight:900;font-size:15px;letter-spacing:-0.2px;">{{ sec.title }}</div>
+                </div>
+                <div style="font-weight:800;font-size:12.5px;color:rgba(0,0,0,.42);">{{ sec.countLabel }}</div>
+              </div>
+              <div class="mp-noscroll" style="display:flex;gap:14px;overflow-x:auto;padding:4px 20px 14px;scrollbar-width:none;scroll-snap-type:x mandatory;scroll-padding-left:20px;">
+                <sc-for list="{{ sec.items }}" as="c" hint-placeholder-count="2">
+                  <div data-hs="{{ c.hs }}" onClick="{{ c.open }}" style="flex:none;width:{{ c.w }};scroll-snap-align:start;background:#fff;border-radius:22px;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 4px 14px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);padding:9px;box-sizing:border-box;display:flex;flex-direction:column;cursor:pointer;">
+                    <div style="position:relative;height:{{ c.h }};border-radius:16px;overflow:hidden;background:#ebf7fc;">
+                      <img src="{{ c.img }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+                      <div style="position:absolute;left:10px;top:10px;height:26px;border-radius:999px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);display:flex;align-items:center;gap:4px;padding:0 9px 0 7px;font-weight:800;font-size:11.5px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe8f09" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        {{ c.dest }}
+                      </div>
+                    </div>
+                    <div style="padding:12px 6px 6px;display:flex;flex-direction:column;gap:4px;flex:1;">
+                      <div style="font-weight:900;font-size:{{ c.fs }};line-height:1.2;letter-spacing:-0.1px;text-wrap:pretty;">{{ c.name }}</div>
+                      <div style="font-weight:700;font-size:12.5px;color:rgba(0,0,0,.62);">{{ c.meta }}</div>
+                      <div style="flex:1;min-height:12px;"></div>
+                      <div style="display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:4px;">
+                        <div style="display:flex;flex-direction:column;">
+                          <div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.62);line-height:15px;">Desde</div>
+                          <div style="font-weight:900;font-size:{{ c.pfs }};color:#029cda;letter-spacing:-0.2px;line-height:1.25;white-space:nowrap;">{{ c.price }}</div>
+                          <div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.62);line-height:15px;">por persona</div>
+                        </div>
+                        <div style="width:38px;height:38px;border-radius:50%;background:#fe8f09;box-shadow:0 10px 24px rgba(254,143,9,.35);color:#fff;display:flex;align-items:center;justify-content:center;flex:none;">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ homeList }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:14px;padding:28px 0 28px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:0 20px;">
+            <div style="font-weight:900;font-size:15px;letter-spacing:-0.2px;">{{ listTitle }}</div>
+            <div style="font-weight:800;font-size:12.5px;color:rgba(0,0,0,.42);">{{ listCount }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px;padding:0 20px;">
+            <sc-for list="{{ listItems }}" as="c" hint-placeholder-count="3">
+              <div data-hs="{{ c.hs }}" onClick="{{ c.open }}" style="background:#fff;border-radius:22px;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 4px 14px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);padding:9px;display:flex;flex-direction:column;cursor:pointer;">
+                <div style="position:relative;height:187px;border-radius:16px;overflow:hidden;background:#ebf7fc;">
+                  <img src="{{ c.img }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+                  <div style="position:absolute;left:10px;top:10px;height:26px;border-radius:999px;background:rgba(255,255,255,.92);display:flex;align-items:center;gap:4px;padding:0 9px 0 7px;font-weight:800;font-size:11.5px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe8f09" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    {{ c.dest }}
+                  </div>
+                </div>
+                <div style="padding:12px 6px 6px;display:flex;flex-direction:column;gap:4px;">
+                  <div style="font-weight:900;font-size:16px;line-height:1.2;">{{ c.name }}</div>
+                  <div style="font-weight:700;font-size:12.5px;color:rgba(0,0,0,.62);">{{ c.meta }}</div>
+                  <div style="display:flex;align-items:flex-end;justify-content:space-between;padding-top:14px;">
+                    <div style="display:flex;flex-direction:column;">
+                      <div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.62);">Desde</div>
+                      <div style="font-weight:900;font-size:17px;color:#029cda;letter-spacing:-0.2px;white-space:nowrap;">{{ c.price }}</div>
+                      <div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.62);">por persona</div>
+                    </div>
+                    <div style="width:38px;height:38px;border-radius:50%;background:#fe8f09;box-shadow:0 10px 24px rgba(254,143,9,.35);color:#fff;display:flex;align-items:center;justify-content:center;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ homeEmpty }}" hint-placeholder-val="{{ false }}">
+        <div data-hs="m.home.empty" style="display:flex;flex-direction:column;align-items:center;gap:20px;padding:60px 30px;text-align:center;">
+          <div style="width:96px;height:96px;border-radius:50%;background:#ebf7fc;color:#029cda;display:flex;align-items:center;justify-content:center;">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          </div>
+          <div style="font-weight:900;font-size:18px;line-height:1.25;">Por ahora no tenemos paquetes en este destino</div>
+          <div onClick="{{ allDests }}" style="height:46px;border-radius:14px;background:#029cda;color:#fff;box-shadow:0 10px 24px rgba(2,156,218,.32);display:flex;align-items:center;gap:8px;padding:0 20px;font-weight:900;font-size:14px;cursor:pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+            Ver todos los destinos
+          </div>
+        </div>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <!-- ============ DETALLE DEL PAQUETE ============ -->
+  <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+    <div class="mp-noscroll" style="position:absolute;inset:0;overflow-y:auto;scrollbar-width:none;background:#fff;">
+      <div style="position:relative;height:360px;">
+        <div data-hs="m.det.carousel" ref="{{ carRef }}" onScroll="{{ onCarScroll }}" class="mp-noscroll" style="display:flex;overflow-x:auto;scroll-snap-type:x mandatory;height:360px;scrollbar-width:none;">
+          <sc-for list="{{ det.imgs }}" as="im" hint-placeholder-count="1">
+            <img src="{{ im }}" alt="" style="flex:none;width:390px;height:360px;object-fit:cover;scroll-snap-align:start;display:block;">
+          </sc-for>
+        </div>
+        <div style="position:absolute;left:0;right:0;bottom:40px;display:flex;justify-content:center;gap:5px;pointer-events:none;">
+          <sc-for list="{{ det.dots }}" as="d" hint-placeholder-count="5"><div style="width:{{ d.w }};height:6px;border-radius:3px;background:{{ d.bg }};"></div></sc-for>
+        </div>
+        <div style="position:absolute;right:16px;bottom:34px;height:24px;border-radius:999px;background:rgba(0,0,0,.45);color:#fff;display:flex;align-items:center;gap:5px;padding:0 9px;font-weight:800;font-size:12px;pointer-events:none;white-space:nowrap;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+          {{ det.counter }}
+        </div>
+        <div data-hs="m.det.back" onClick="{{ goHome }}" style="position:absolute;left:16px;top:56px;width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        </div>
+      </div>
+      <div style="position:relative;margin-top:-30px;background:#fff;border-radius:28px 28px 0 0;padding:22px 20px {{ det.padBottom }};display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <div style="height:32px;border-radius:999px;background:#f6f8f9;display:flex;align-items:center;gap:6px;padding:0 12px;font-weight:800;font-size:13px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#029cda" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            {{ det.dest }}
+          </div>
+          <div style="height:32px;border-radius:999px;background:#fff4e6;display:flex;align-items:center;gap:6px;padding:0 12px;font-weight:800;font-size:13px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fe8f09" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            {{ det.dur }}
+          </div>
+        </div>
+        <div data-hs="m.det.name" style="font-weight:900;font-size:26px;line-height:1.15;letter-spacing:-0.3px;">{{ det.name }}</div>
+        <div data-hs="m.det.prices" style="display:flex;gap:10px;">
+          <div style="flex:1;border-radius:16px;background:#ebf7fc;padding:12px 14px;display:flex;flex-direction:column;gap:4px;">
+            <div style="font-weight:700;font-size:12.5px;color:rgba(0,0,0,.62);">Adulto (desde 12 años)</div>
+            <div style="font-weight:900;font-size:17px;color:#0279ab;">{{ det.adult }}</div>
+          </div>
+          <sc-if value="{{ det.hasChild }}">
+            <div style="flex:1;border-radius:16px;background:#fff4e6;padding:12px 14px;display:flex;flex-direction:column;gap:4px;">
+              <div style="font-weight:700;font-size:12.5px;color:rgba(0,0,0,.62);">Niño (2 a 11 años)</div>
+              <div style="font-weight:900;font-size:17px;color:#b85f00;">{{ det.child }}</div>
+            </div>
+          </sc-if>
+        </div>
+        <div data-hs="m.det.until" style="height:46px;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.1);display:flex;align-items:center;gap:10px;padding:0 14px;font-weight:800;font-size:13.5px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#029cda" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path></svg>
+          {{ det.until }}
+        </div>
+        <div data-hs="m.det.desc" style="display:flex;flex-direction:column;gap:10px;padding-top:8px;">
+          <div style="font-weight:900;font-size:16px;">Descripción</div>
+          <div style="position:relative;max-height:{{ det.descMax }};overflow:hidden;">
+            <sc-for list="{{ det.lines }}" as="ln" hint-placeholder-count="6">
+              <div style="font-weight:{{ ln.fw }};font-size:{{ ln.fs }};letter-spacing:{{ ln.ls }};color:{{ ln.color }};line-height:24px;min-height:{{ ln.mh }};padding-top:{{ ln.pt }};">{{ ln.text }}</div>
+            </sc-for>
+            <sc-if value="{{ det.showFade }}"><div style="position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(rgba(255,255,255,0),#fff);"></div></sc-if>
+          </div>
+          <div data-hs="m.det.more" onClick="{{ toggleDesc }}" style="display:flex;align-items:center;gap:4px;font-weight:900;font-size:14px;color:#029cda;cursor:pointer;">
+            {{ det.moreLabel }}
+            <sc-if value="{{ det.descOpen }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg></sc-if>
+            <sc-if value="{{ det.descClosed }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></sc-if>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-hs="m.det.sheet" style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:26px 26px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.10);padding:8px 20px 22px;display:flex;flex-direction:column;gap:12px;">
+      <div style="width:40px;height:4px;border-radius:2px;background:rgba(0,0,0,.14);align-self:center;"></div>
+      <div style="display:flex;align-items:center;gap:10px;padding-bottom:{{ det.travPad }};border-bottom:{{ det.travBorder }};">
+        <div style="width:34px;height:34px;border-radius:10px;background:#ebf7fc;color:#029cda;display:flex;align-items:center;justify-content:center;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;">
+          <div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.42);">Viajeros</div>
+          <div style="font-weight:900;font-size:14px;">{{ det.travLabel }}</div>
+        </div>
+        <div data-hs="m.det.toggle" onClick="{{ toggleTrav }}" style="height:30px;border-radius:999px;background:{{ det.toggleBg }};color:{{ det.toggleFg }};display:flex;align-items:center;gap:4px;padding:0 12px;font-weight:900;font-size:12.5px;cursor:pointer;">
+          {{ det.toggleLabel }}
+          <sc-if value="{{ det.travOpen }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></sc-if>
+          <sc-if value="{{ det.travClosed }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg></sc-if>
+        </div>
+      </div>
+      <sc-if value="{{ det.travOpen }}">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div data-hs="m.det.adults" style="display:flex;align-items:center;justify-content:space-between;">
+            <div><div style="font-weight:900;font-size:15px;">Adultos</div><div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.42);white-space:nowrap;">Desde 12 años</div></div>
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div onClick="{{ decA }}" style="width:36px;height:36px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:{{ det.decAColor }};"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path></svg></div>
+              <div style="font-weight:900;font-size:16px;min-width:14px;text-align:center;">{{ det.a }}</div>
+              <div onClick="{{ incA }}" style="width:36px;height:36px;border-radius:50%;background:#029cda;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></div>
+            </div>
+          </div>
+          <sc-if value="{{ det.hasChild }}">
+            <div data-hs="m.det.kids" style="display:flex;align-items:center;justify-content:space-between;">
+              <div><div style="font-weight:900;font-size:15px;">Niños</div><div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.42);white-space:nowrap;">2 a 11 años</div></div>
+              <div style="display:flex;align-items:center;gap:14px;">
+                <div onClick="{{ decK }}" style="width:36px;height:36px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:{{ det.decKColor }};"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path></svg></div>
+                <div style="font-weight:900;font-size:16px;min-width:14px;text-align:center;">{{ det.k }}</div>
+                <div onClick="{{ incK }}" style="width:36px;height:36px;border-radius:50%;background:#029cda;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></div>
+              </div>
+            </div>
+          </sc-if>
+          <div data-hs="m.det.babies" style="display:flex;gap:8px;align-items:flex-start;font-weight:700;font-size:12px;color:rgba(0,0,0,.62);line-height:1.35;">
+            <div style="width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 2px #fe8f09;flex:none;margin-top:1px;"></div>
+            Si viajas con bebés menores de 2 años, tu asesor te ayudará con su reserva.
+          </div>
+        </div>
+      </sc-if>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+        <div data-hs="m.det.total"><div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.42);">Total</div><div style="font-weight:900;font-size:19px;">{{ det.total }}</div></div>
+        <div data-hs="m.det.add" onClick="{{ addToCart }}" style="height:54px;border-radius:16px;background:#fe8f09;box-shadow:0 10px 24px rgba(254,143,9,.35);color:#fff;display:flex;align-items:center;gap:8px;padding:0 20px;font-weight:900;font-size:15.5px;cursor:pointer;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span style="white-space:nowrap;">{{ det.addLabel }}</span>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ CARRITO ============ -->
+  <sc-if value="{{ isCart }}" hint-placeholder-val="{{ false }}">
+    <div class="mp-noscroll" style="position:absolute;left:0;top:0;right:0;bottom:{{ cartBottom }};overflow-y:auto;scrollbar-width:none;">
+      <div style="padding:70px 20px 28px;display:flex;flex-direction:column;gap:18px;">
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div style="font-weight:900;font-size:26px;letter-spacing:-0.3px;">Carrito</div>
+          <sc-if value="{{ cartHasItems }}"><div style="min-width:24px;height:24px;border-radius:12px;background:#fe8f09;color:#fff;font-weight:900;font-size:12px;display:flex;align-items:center;justify-content:center;padding:0 6px;box-sizing:border-box;">{{ cartCount }}</div></sc-if>
+        </div>
+
+        <sc-if value="{{ cartEmpty }}" hint-placeholder-val="{{ false }}">
+          <div data-hs="m.cart.empty" style="display:flex;flex-direction:column;align-items:center;gap:18px;padding:70px 20px;text-align:center;">
+            <div style="width:96px;height:96px;border-radius:50%;background:#ebf7fc;color:#029cda;display:flex;align-items:center;justify-content:center;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+            <div style="font-weight:900;font-size:18px;">Tu carrito está vacío</div>
+            <div onClick="{{ goHome }}" style="height:46px;border-radius:14px;background:#029cda;color:#fff;box-shadow:0 10px 24px rgba(2,156,218,.32);display:flex;align-items:center;padding:0 22px;font-weight:900;font-size:14px;cursor:pointer;">Explorar paquetes</div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ cartHasItems }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:18px;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div style="width:26px;height:26px;border-radius:8px;background:#000;color:#fff;font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;">1</div>
+              <div style="font-weight:900;font-size:15px;">Paquetes</div>
+            </div>
+            <sc-for list="{{ cartLines }}" as="l" hint-placeholder-count="2">
+              <div data-hs="{{ l.hs }}" style="border-radius:22px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 4px 14px rgba(0,0,0,.06);padding:12px;display:flex;flex-direction:column;gap:12px;">
+                <div style="display:flex;gap:12px;align-items:flex-start;">
+                  <div style="position:relative;width:84px;height:84px;border-radius:14px;overflow:hidden;flex:none;background:#ebf7fc;">
+                    <img src="{{ l.img }}" alt="" style="width:100%;height:100%;object-fit:cover;opacity:{{ l.imgOp }};">
+                  </div>
+                  <div style="flex:1;display:flex;flex-direction:column;gap:3px;padding-top:2px;min-width:0;">
+                    <div style="font-weight:900;font-size:15px;line-height:1.2;">{{ l.name }}</div>
+                    <div style="font-weight:700;font-size:12.5px;color:rgba(0,0,0,.62);">{{ l.dur }}</div>
+                    <sc-if value="{{ l.na }}"><div style="align-self:flex-start;margin-top:4px;height:22px;border-radius:999px;background:#000;color:#fff;font-weight:800;font-size:11px;display:flex;align-items:center;padding:0 9px;">No disponible</div></sc-if>
+                  </div>
+                  <div data-hs="{{ l.hsDel }}" onClick="{{ l.remove }}" style="width:36px;height:36px;border-radius:12px;background:#f6f8f9;color:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>
+                  </div>
+                </div>
+                <sc-if value="{{ l.na }}">
+                  <div style="border-radius:14px;background:#fff4e6;box-shadow:inset 0 0 0 1px rgba(254,143,9,.35);padding:10px 12px;display:flex;gap:8px;align-items:flex-start;color:#b85f00;font-weight:800;font-size:12.5px;line-height:1.35;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+                    Este paquete ya no está disponible. Elimínalo para continuar.
+                  </div>
+                </sc-if>
+                <sc-if value="{{ l.ok }}">
+                  <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div style="border-radius:16px;background:#fbfaf6;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);padding:12px 14px;display:flex;flex-direction:column;gap:10px;">
+                      <div style="display:flex;align-items:center;justify-content:space-between;">
+                        <div><div style="font-weight:900;font-size:14.5px;">Adultos</div><div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.42);white-space:nowrap;">Desde 12 años</div></div>
+                        <div style="display:flex;align-items:center;gap:12px;">
+                          <div onClick="{{ l.decA }}" style="width:34px;height:34px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:{{ l.decAColor }};"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path></svg></div>
+                          <div style="font-weight:900;font-size:15px;min-width:12px;text-align:center;">{{ l.a }}</div>
+                          <div onClick="{{ l.incA }}" style="width:34px;height:34px;border-radius:50%;background:#029cda;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></div>
+                        </div>
+                      </div>
+                      <sc-if value="{{ l.hasChild }}">
+                        <div style="display:flex;align-items:center;justify-content:space-between;">
+                          <div><div style="font-weight:900;font-size:14.5px;">Niños</div><div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.42);white-space:nowrap;">2 a 11 años</div></div>
+                          <div style="display:flex;align-items:center;gap:12px;">
+                            <div onClick="{{ l.decK }}" style="width:34px;height:34px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;cursor:pointer;color:{{ l.decKColor }};"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path></svg></div>
+                            <div style="font-weight:900;font-size:15px;min-width:12px;text-align:center;">{{ l.k }}</div>
+                            <div onClick="{{ l.incK }}" style="width:34px;height:34px;border-radius:50%;background:#029cda;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></div>
+                          </div>
+                        </div>
+                      </sc-if>
+                    </div>
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:0 4px;">
+                      <div style="font-weight:700;font-size:13px;color:rgba(0,0,0,.62);">Subtotal del paquete</div>
+                      <div style="font-weight:900;font-size:15.5px;">{{ l.sub }}</div>
+                    </div>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-for>
+
+            <div style="display:flex;align-items:center;gap:10px;padding-top:6px;">
+              <div style="width:26px;height:26px;border-radius:8px;background:#000;color:#fff;font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;">2</div>
+              <div style="font-weight:900;font-size:15px;">Datos del titular</div>
+            </div>
+            <div data-hs="m.cart.holder" style="border-radius:22px;background:#f6f8f9;padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;">
+              <div data-hs="m.cart.prefill" style="display:flex;gap:8px;align-items:flex-start;font-weight:700;font-size:12.5px;color:rgba(0,0,0,.62);line-height:1.35;padding-bottom:6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#029cda" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                {{ prefillNote }}
+              </div>
+              <sc-for list="{{ fields }}" as="fd" hint-placeholder-count="5">
+                <div data-hs="{{ fd.hs }}" style="display:flex;flex-direction:column;gap:6px;">
+                  <div style="font-weight:800;font-size:12.5px;color:rgba(0,0,0,.62);padding:4px 4px 0;">{{ fd.label }}</div>
+                  <div style="height:52px;border-radius:14px;background:#fff;box-shadow:{{ fd.ring }};display:flex;align-items:center;gap:10px;padding:0 14px;">
+                    <span style="display:flex;color:{{ fd.iconColor }};flex:none;">
+                      <sc-if value="{{ fd.iUser }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></sc-if>
+                      <sc-if value="{{ fd.iDoc }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><path d="M16 10h2"></path><path d="M16 14h2"></path><path d="M6.17 15a3 3 0 0 1 5.66 0"></path><circle cx="9" cy="11" r="2"></circle></svg></sc-if>
+                      <sc-if value="{{ fd.iPass }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"></rect><circle cx="12" cy="10" r="3"></circle><path d="M9 17h6"></path></svg></sc-if>
+                      <sc-if value="{{ fd.iMail }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></sc-if>
+                      <sc-if value="{{ fd.iPhone }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></sc-if>
+                    </span>
+                    <input value="{{ fd.value }}" placeholder="{{ fd.ph }}" inputMode="{{ fd.mode }}" onChange="{{ fd.onChange }}" onBlur="{{ fd.onBlur }}" style="flex:1;min-width:0;border:none;outline:none;background:transparent;font-family:'Nunito',sans-serif;font-weight:700;font-size:15px;color:#000;">
+                    <sc-if value="{{ fd.ok }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
+                  </div>
+                  <sc-if value="{{ fd.err }}"><div style="display:flex;align-items:center;gap:6px;color:#f06010;font-weight:800;font-size:12px;padding:0 4px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>{{ fd.err }}</div></sc-if>
+                </div>
+              </sc-for>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:10px;padding-top:6px;">
+              <div style="width:26px;height:26px;border-radius:8px;background:#000;color:#fff;font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;">3</div>
+              <div style="font-weight:900;font-size:15px;">Total</div>
+            </div>
+            <div data-hs="m.cart.total" style="border-radius:22px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08);padding:16px 18px;display:flex;flex-direction:column;gap:10px;">
+              <sc-for list="{{ cartLines }}" as="l" hint-placeholder-count="2">
+                <div style="display:flex;justify-content:space-between;gap:10px;font-size:13.5px;">
+                  <div style="font-weight:700;color:rgba(0,0,0,.62);">{{ l.name }}</div>
+                  <div style="font-weight:900;white-space:nowrap;">{{ l.subOrNa }}</div>
+                </div>
+              </sc-for>
+              <div style="height:1px;background:rgba(0,0,0,.08);margin:4px 0;"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div style="font-weight:900;font-size:15.5px;">Total a pagar</div>
+                <div style="font-weight:900;font-size:22px;color:#029cda;">{{ cartTotal }}</div>
+              </div>
+              <div style="text-align:right;font-weight:700;font-size:12px;color:rgba(0,0,0,.42);">Precios con impuestos incluidos</div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+    <sc-if value="{{ cartHasItems }}">
+      <div data-hs="m.cart.paybar" style="position:absolute;left:0;right:0;bottom:84px;height:80px;background:#fff;box-shadow:0 -1px 0 rgba(0,0,0,.08);display:flex;align-items:center;justify-content:space-between;padding:0 18px 0 20px;">
+        <div><div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.42);">Total a pagar</div><div style="font-weight:900;font-size:19px;">{{ cartTotal }}</div></div>
+        <div data-hs="m.cart.pay" onClick="{{ pay }}" style="height:54px;width:169px;border-radius:16px;background:{{ payBg }};color:{{ payFg }};box-shadow:{{ payShadow }};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15.5px;cursor:{{ payCursor }};">Pagar con TOKA</div>
+      </div>
+    </sc-if>
+  </sc-if>
+
+  <!-- ============ RESULTADO DEL PAGO ============ -->
+  <sc-if value="{{ isResultOk }}" hint-placeholder-val="{{ false }}">
+    <div class="mp-noscroll" style="position:absolute;left:0;top:0;right:0;bottom:84px;overflow-y:auto;scrollbar-width:none;"><div style="padding:96px 20px 24px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;">
+      <div style="width:112px;height:112px;border-radius:50%;background:#029cda;box-shadow:0 10px 24px rgba(2,156,218,.32),0 0 0 14px #ebf7fc;color:#fff;display:flex;align-items:center;justify-content:center;flex:none;">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+      </div>
+      <div data-hs="m.ok.title" style="font-weight:900;font-size:24px;padding-top:14px;white-space:nowrap;">¡Tu compra fue exitosa!</div>
+      <div data-hs="m.ok.order" style="height:34px;border-radius:999px;background:#fff4e6;display:flex;align-items:center;gap:6px;padding:0 14px;font-weight:700;font-size:13px;color:rgba(0,0,0,.62);">Número de orden: <span style="font-weight:900;color:#000;font-size:15px;">{{ res.orderId }}</span></div>
+      <div style="font-weight:600;font-size:14px;color:rgba(0,0,0,.62);line-height:1.5;max-width:300px;">Un asesor de Sol Travel se comunicará contigo para confirmar las fechas de tu viaje y los datos de los viajeros.</div>
+      <div data-hs="m.ok.summary" style="align-self:stretch;border-radius:20px;box-shadow:0 0 0 1px rgba(0,0,0,.1);padding:14px 16px;display:flex;flex-direction:column;gap:10px;text-align:left;">
+        <sc-for list="{{ res.items }}" as="it" hint-placeholder-count="2">
+          <div style="display:flex;justify-content:space-between;gap:8px;font-size:12.5px;"><div style="font-weight:700;color:rgba(0,0,0,.62);">{{ it.label }}</div><div style="font-weight:900;white-space:nowrap;">{{ it.amount }}</div></div>
+        </sc-for>
+        <div style="height:1px;background:rgba(0,0,0,.08);"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;"><div style="font-weight:900;font-size:14px;">Total pagado</div><div style="font-weight:900;font-size:20px;color:#029cda;">{{ res.total }}</div></div>
+      </div>
+      <div data-hs="m.ok.trips" onClick="{{ goTrips }}" style="align-self:stretch;height:54px;border-radius:16px;background:#029cda;color:#fff;box-shadow:0 10px 24px rgba(2,156,218,.32);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:15.5px;cursor:pointer;flex:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+        Ver mis viajes
+      </div>
+      <div data-hs="m.ok.home" onClick="{{ goHome }}" style="align-self:stretch;height:54px;border-radius:16px;background:#f6f8f9;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15.5px;cursor:pointer;flex:none;">Volver al inicio</div>
+    </div></div>
+  </sc-if>
+  <sc-if value="{{ isResultFail }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;left:0;top:0;right:0;bottom:84px;padding:200px 20px 24px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;">
+      <div style="width:112px;height:112px;border-radius:50%;background:#f06010;box-shadow:0 0 0 14px #fff4e6;color:#fff;display:flex;align-items:center;justify-content:center;">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </div>
+      <div data-hs="m.fail.title" style="font-weight:900;font-size:22px;padding-top:18px;white-space:nowrap;">No pudimos procesar tu pago</div>
+      <div style="font-weight:600;font-size:14px;color:rgba(0,0,0,.62);padding-bottom:16px;">Puedes intentarlo de nuevo.</div>
+      <div data-hs="m.fail.retry" onClick="{{ goCart }}" style="align-self:stretch;height:54px;border-radius:16px;background:#029cda;color:#fff;box-shadow:0 10px 24px rgba(2,156,218,.32);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:15.5px;cursor:pointer;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+        Reintentar pago
+      </div>
+      <div data-hs="m.fail.home" onClick="{{ goHome }}" style="align-self:stretch;height:54px;border-radius:16px;background:#f6f8f9;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15.5px;cursor:pointer;">Volver al inicio</div>
+    </div>
+  </sc-if>
+
+  <!-- ============ MIS VIAJES ============ -->
+  <sc-if value="{{ isTrips }}" hint-placeholder-val="{{ false }}">
+    <div class="mp-noscroll" style="position:absolute;left:0;top:0;right:0;bottom:84px;overflow-y:auto;scrollbar-width:none;">
+      <div style="padding:70px 20px 28px;display:flex;flex-direction:column;gap:16px;">
+        <div style="font-weight:900;font-size:26px;letter-spacing:-0.3px;">Mis viajes</div>
+        <sc-if value="{{ tripsEmpty }}" hint-placeholder-val="{{ false }}">
+          <div data-hs="m.trips.empty" style="display:flex;flex-direction:column;align-items:center;gap:18px;padding:80px 20px;text-align:center;">
+            <div style="width:96px;height:96px;border-radius:50%;background:#ebf7fc;color:#029cda;display:flex;align-items:center;justify-content:center;">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+            </div>
+            <div style="font-weight:900;font-size:18px;">Aún no tienes viajes</div>
+            <div onClick="{{ goHome }}" style="height:46px;border-radius:14px;background:#029cda;color:#fff;box-shadow:0 10px 24px rgba(2,156,218,.32);display:flex;align-items:center;padding:0 22px;font-weight:900;font-size:14px;cursor:pointer;">Explorar paquetes</div>
+          </div>
+        </sc-if>
+        <sc-for list="{{ trips }}" as="t" hint-placeholder-count="3">
+          <div data-hs="{{ t.hs }}" onClick="{{ t.open }}" style="border-radius:20px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 4px 14px rgba(0,0,0,.06);padding:10px;display:flex;flex-direction:column;gap:10px;cursor:pointer;">
+            <div style="display:flex;gap:12px;">
+              <img src="{{ t.img }}" alt="" style="width:80px;height:104px;border-radius:14px;object-fit:cover;flex:none;background:#ebf7fc;">
+              <div style="flex:1;display:flex;flex-direction:column;gap:5px;min-width:0;padding-top:2px;">
+                <div style="font-weight:900;font-size:15px;line-height:1.2;">{{ t.name }}</div>
+                <div style="display:flex;align-items:center;gap:5px;font-weight:700;font-size:12px;color:rgba(0,0,0,.62);">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path></svg>
+                  <span style="white-space:nowrap;letter-spacing:-0.1px;">{{ t.orderLine }}</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:5px;font-weight:700;font-size:12px;color:rgba(0,0,0,.62);">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span style="white-space:nowrap;">{{ t.trav }}</span>
+                </div>
+                <div style="flex:1;"></div>
+                <div style="display:flex;align-items:center;justify-content:space-between;">
+                  <div style="font-weight:900;font-size:15px;">{{ t.paid }}</div>
+                  <div style="height:22px;border-radius:999px;background:#ebf7fc;color:#0279ab;display:flex;align-items:center;gap:4px;padding:0 8px;font-weight:800;font-size:11px;">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Pagado
+                  </div>
+                </div>
+              </div>
+            </div>
+            <sc-if value="{{ t.changed }}">
+              <div data-hs="{{ t.hsChange }}" style="border-radius:14px;background:#fff4e6;box-shadow:inset 0 0 0 1px rgba(254,143,9,.35);padding:9px 12px;display:flex;gap:8px;align-items:center;color:#b85f00;font-weight:800;font-size:12.5px;line-height:1.3;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+                Este paquete ha tenido cambios, revísalo con tu asesor
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ DETALLE DEL VIAJE ============ -->
+  <sc-if value="{{ isTrip }}" hint-placeholder-val="{{ false }}">
+    <div class="mp-noscroll" style="position:absolute;left:0;top:0;right:0;bottom:84px;overflow-y:auto;scrollbar-width:none;">
+      <div style="padding:66px 20px 32px;display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div data-hs="m.trip.back" onClick="{{ goTrips }}" style="width:44px;height:44px;border-radius:50%;background:#f6f8f9;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+          </div>
+          <div style="font-weight:900;font-size:21px;">Detalle del viaje</div>
+        </div>
+        <sc-if value="{{ trip.changed }}">
+          <div data-hs="m.trip.change" style="border-radius:18px;background:#fff4e6;box-shadow:inset 0 0 0 1px rgba(254,143,9,.4);padding:12px 14px;display:flex;gap:12px;align-items:center;color:#b85f00;font-weight:900;font-size:13.5px;line-height:1.35;">
+            <div style="width:40px;height:40px;border-radius:12px;background:#fe8f09;color:#fff;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg></div>
+            Este paquete ha tenido cambios, revísalo con tu asesor
+          </div>
+        </sc-if>
+        <div style="display:flex;align-items:center;gap:10px;font-weight:900;font-size:15px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path></svg>Datos de la compra</div>
+        <div data-hs="m.trip.purchase" style="border-radius:20px;background:#f6f8f9;padding:14px 16px;display:flex;flex-direction:column;gap:12px;">
+          <sc-for list="{{ trip.rows }}" as="r" hint-placeholder-count="4">
+            <div style="display:flex;justify-content:space-between;gap:10px;font-size:13.5px;"><div style="font-weight:600;color:rgba(0,0,0,.62);">{{ r.k }}</div><div style="font-weight:900;text-align:right;">{{ r.v }}</div></div>
+          </sc-for>
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:13.5px;"><div style="font-weight:600;color:rgba(0,0,0,.62);">Estado</div><div style="height:24px;border-radius:999px;background:#ebf7fc;color:#0279ab;display:flex;align-items:center;gap:4px;padding:0 10px;font-weight:800;font-size:11.5px;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Pagado</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-weight:900;font-size:15px;padding-top:4px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Datos del titular</div>
+        <div data-hs="m.trip.holder" style="border-radius:20px;background:#f6f8f9;padding:14px 16px;display:flex;flex-direction:column;gap:12px;">
+          <sc-for list="{{ trip.holder }}" as="r" hint-placeholder-count="5">
+            <div style="display:flex;justify-content:space-between;gap:10px;font-size:13.5px;"><div style="font-weight:600;color:rgba(0,0,0,.62);">{{ r.k }}</div><div style="font-weight:900;text-align:right;word-break:break-all;">{{ r.v }}</div></div>
+          </sc-for>
+        </div>
+        <div data-hs="m.trip.advisor" style="border-radius:20px;background:#029cda;box-shadow:0 10px 24px rgba(2,156,218,.28);padding:16px;display:flex;gap:12px;align-items:center;color:#fff;font-weight:900;font-size:13.5px;line-height:1.4;">
+          <div style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;flex:none;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg></div>
+          Un asesor de Sol Travel se comunicará contigo para confirmar las fechas de tu viaje y los datos de los viajeros.
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;font-weight:900;font-size:15px;padding-top:4px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Información del paquete</div>
+        <div data-hs="m.trip.info" style="display:flex;flex-direction:column;gap:10px;">
+          <img src="{{ trip.cover }}" alt="" style="width:100%;height:206px;border-radius:20px;object-fit:cover;background:#ebf7fc;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <sc-for list="{{ trip.thumbs }}" as="im" hint-placeholder-count="2"><img src="{{ im }}" alt="" style="width:120px;height:90px;border-radius:12px;object-fit:cover;"></sc-for>
+          </div>
+          <div style="font-weight:900;font-size:21px;padding-top:4px;">{{ trip.name }}</div>
+          <div style="display:flex;gap:8px;">
+            <div style="height:30px;border-radius:999px;background:#f6f8f9;display:flex;align-items:center;gap:6px;padding:0 12px;font-weight:800;font-size:12.5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#029cda" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>{{ trip.dest }}</div>
+            <div style="height:30px;border-radius:999px;background:#fff4e6;display:flex;align-items:center;gap:6px;padding:0 12px;font-weight:800;font-size:12.5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fe8f09" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>{{ trip.dur }}</div>
+          </div>
+          <div style="padding-top:6px;">
+            <sc-for list="{{ trip.lines }}" as="ln" hint-placeholder-count="6">
+              <div style="font-weight:{{ ln.fw }};font-size:{{ ln.fs }};letter-spacing:{{ ln.ls }};color:{{ ln.color }};line-height:24px;min-height:{{ ln.mh }};padding-top:{{ ln.pt }};">{{ ln.text }}</div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ STATUS BAR ============ -->
+  <div style="position:absolute;left:0;top:0;right:0;height:50px;background:{{ sbBg }};color:{{ sbFg }};display:flex;align-items:center;justify-content:space-between;padding:0 30px 0 34px;pointer-events:none;z-index:5;">
+    <div style="font-weight:800;font-size:15px;">9:41</div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <svg width="20" height="12" viewBox="0 0 20 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"></rect><rect x="5" y="5" width="3" height="7" rx="1"></rect><rect x="10" y="3" width="3" height="9" rx="1"></rect><rect x="15" y="0" width="3" height="12" rx="1"></rect></svg>
+      <svg width="26" height="12" viewBox="0 0 26 12" fill="none"><rect x="0.5" y="0.5" width="22" height="11" rx="3" stroke="currentColor" opacity="0.5"></rect><rect x="2.5" y="2.5" width="16" height="7" rx="1.5" fill="currentColor"></rect><rect x="24" y="4" width="2" height="4" rx="1" fill="currentColor" opacity="0.5"></rect></svg>
+    </div>
+  </div>
+
+  <!-- ============ MENÚ INFERIOR ============ -->
+  <sc-if value="{{ showNav }}" hint-placeholder-val="{{ false }}">
+    <div data-hs="m.nav" style="position:absolute;left:0;right:0;bottom:0;height:84px;background:#fff;box-shadow:0 -1px 0 rgba(0,0,0,.08);display:flex;padding:9px 10px 0;box-sizing:border-box;z-index:6;">
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+        <div data-hs="{{ n.hs }}" onClick="{{ n.go }}" style="flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;">
+          <div style="position:relative;width:50px;height:32px;border-radius:12px;background:{{ n.bg }};box-shadow:{{ n.shadow }};color:{{ n.fg }};display:flex;align-items:center;justify-content:center;">
+            <sc-if value="{{ n.iHome }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></sc-if>
+            <sc-if value="{{ n.iCart }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path d="M16 10a4 4 0 0 1-8 0"></path></svg></sc-if>
+            <sc-if value="{{ n.iTrips }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></sc-if>
+            <sc-if value="{{ n.iHelp }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></sc-if>
+            <sc-if value="{{ n.badge }}"><div style="position:absolute;right:-6px;top:-6px;min-width:20px;height:20px;border-radius:10px;background:#fe8f09;color:#fff;box-shadow:0 0 0 2px #fff;font-weight:900;font-size:11px;display:flex;align-items:center;justify-content:center;padding:0 5px;box-sizing:border-box;">{{ n.badge }}</div></sc-if>
+          </div>
+          <div style="font-weight:800;font-size:11.5px;color:{{ n.label }};">{{ n.text }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <!-- ============ TOAST ============ -->
+  <sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+    <div data-hs="m.toast" style="position:absolute;left:14px;right:14px;bottom:{{ toastBottom }};min-height:56px;border-radius:18px;background:#000;color:#fff;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 12px;box-sizing:border-box;z-index:20;box-shadow:0 10px 30px rgba(0,0,0,.25);">
+      <div style="width:26px;height:26px;border-radius:50%;background:#029cda;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></div>
+      <div style="flex:1;font-weight:900;font-size:13.5px;line-height:1.3;">{{ toast.text }}</div>
+      <sc-if value="{{ toast.action }}"><div onClick="{{ goCart }}" style="height:34px;border-radius:12px;background:#fe8f09;display:flex;align-items:center;padding:0 12px;font-weight:900;font-size:12.5px;cursor:pointer;flex:none;">{{ toast.action }}</div></sc-if>
+    </div>
+  </sc-if>
+
+  <!-- ============ HOJAS / DIÁLOGOS ============ -->
+  <sc-if value="{{ sheetOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeSheet }}" style="position:absolute;inset:0;background:rgba(0,0,0,.42);z-index:30;"></div>
+  </sc-if>
+  <sc-if value="{{ sheetDest }}" hint-placeholder-val="{{ false }}">
+    <div data-hs="m.sheet.dest" style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:28px 28px 0 0;padding:10px 18px 30px;z-index:31;display:flex;flex-direction:column;gap:4px;">
+      <div style="width:40px;height:4px;border-radius:2px;background:rgba(0,0,0,.14);align-self:center;margin-bottom:14px;"></div>
+      <div style="font-weight:900;font-size:15px;padding:0 0 6px;">Destino</div>
+      <div style="font-weight:700;font-size:12.5px;color:rgba(0,0,0,.55);padding-bottom:12px;">¿A dónde quieres viajar?</div>
+      <sc-for list="{{ destOpts }}" as="o" hint-placeholder-count="7">
+        <div onClick="{{ o.pick }}" style="height:64px;border-radius:16px;background:{{ o.bg }};display:flex;align-items:center;gap:12px;padding:0 12px;cursor:pointer;">
+          <div style="width:40px;height:40px;border-radius:12px;background:{{ o.iconBg }};color:{{ o.iconFg }};display:flex;align-items:center;justify-content:center;flex:none;">
+            <sc-if value="{{ o.isAll }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></sc-if>
+            <sc-if value="{{ o.isPin }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></sc-if>
+          </div>
+          <div style="flex:1;"><div style="font-weight:900;font-size:15px;">{{ o.label }}</div><div style="font-weight:800;font-size:11.5px;color:rgba(0,0,0,.42);">{{ o.count }}</div></div>
+          <div style="width:22px;height:22px;border-radius:50%;box-shadow:{{ o.radioRing }};background:{{ o.radioBg }};display:flex;align-items:center;justify-content:center;"><div style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:{{ o.dot }};"></div></div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+  <sc-if value="{{ sheetSort }}" hint-placeholder-val="{{ false }}">
+    <div data-hs="m.sheet.sort" style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:28px 28px 0 0;padding:10px 18px 30px;z-index:31;display:flex;flex-direction:column;gap:4px;">
+      <div style="width:40px;height:4px;border-radius:2px;background:rgba(0,0,0,.14);align-self:center;margin-bottom:14px;"></div>
+      <div style="font-weight:900;font-size:15px;padding:0 0 6px;">Ordenar</div>
+      <div style="font-weight:700;font-size:12.5px;color:rgba(0,0,0,.55);padding-bottom:12px;">Elige cómo ver los paquetes</div>
+      <sc-for list="{{ sortOpts }}" as="o" hint-placeholder-count="3">
+        <div onClick="{{ o.pick }}" style="height:64px;border-radius:16px;background:{{ o.bg }};display:flex;align-items:center;gap:12px;padding:0 12px;cursor:pointer;">
+          <div style="width:40px;height:40px;border-radius:12px;background:{{ o.iconBg }};color:{{ o.iconFg }};display:flex;align-items:center;justify-content:center;flex:none;">
+            <sc-if value="{{ o.isStar }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg></sc-if>
+            <sc-if value="{{ o.isArrow }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"></path><path d="M17 20V4"></path><path d="m3 8 4-4 4 4"></path><path d="M7 4v16"></path></svg></sc-if>
+          </div>
+          <div style="flex:1;font-weight:900;font-size:15px;">{{ o.label }}</div>
+          <div style="width:22px;height:22px;border-radius:50%;box-shadow:{{ o.radioRing }};background:{{ o.radioBg }};display:flex;align-items:center;justify-content:center;"><div style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:{{ o.dot }};"></div></div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+  <sc-if value="{{ sheetPay }}" hint-placeholder-val="{{ false }}">
+    <div data-hs="m.sheet.pay" style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-radius:28px 28px 0 0;padding:10px 20px 34px;z-index:31;display:flex;flex-direction:column;align-items:center;gap:10px;">
+      <div style="width:40px;height:4px;border-radius:2px;background:rgba(0,0,0,.14);margin-bottom:8px;"></div>
+      <div style="height:26px;border-radius:999px;background:#f6f8f9;display:flex;align-items:center;gap:6px;padding:0 12px;font-weight:900;font-size:10.5px;letter-spacing:0.8px;color:rgba(0,0,0,.55);">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"></circle></svg>
+        PASARELA TOKA · SIMULACIÓN
+      </div>
+      <div style="font-weight:700;font-size:13px;color:rgba(0,0,0,.62);">Pagar a Sol Travel</div>
+      <div style="font-weight:900;font-size:32px;letter-spacing:-0.6px;">{{ cartTotal }}</div>
+      <div style="font-weight:700;font-size:12px;color:rgba(0,0,0,.55);padding-bottom:6px;">{{ payNote }}</div>
+      <div data-hs="m.pay.approve" onClick="{{ approve }}" style="align-self:stretch;height:52px;border-radius:16px;background:#029cda;color:#fff;box-shadow:0 10px 24px rgba(2,156,218,.32);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:15px;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Aprobar pago</div>
+      <div data-hs="m.pay.reject" onClick="{{ reject }}" style="align-self:stretch;height:52px;border-radius:16px;background:#fff;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14);display:flex;align-items:center;justify-content:center;gap:8px;font-weight:900;font-size:15px;cursor:pointer;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>Rechazar pago</div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ sheetHelp }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:31;pointer-events:none;">
+      <div data-hs="m.help" style="width:330px;background:#fff;border-radius:28px;padding:26px 18px 18px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:auto;box-shadow:0 20px 50px rgba(0,0,0,.25);">
+        <div style="width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,#f0c000,#f06010);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:8px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg></div>
+        <div style="font-weight:900;font-size:17px;">¿Necesitas ayuda?</div>
+        <div style="font-weight:600;font-size:13px;color:rgba(0,0,0,.62);padding-bottom:12px;">Comunícate con Sol Travel:</div>
+        <div data-hs="m.help.mail" style="align-self:stretch;height:60px;border-radius:16px;background:#f6f8f9;display:flex;align-items:center;gap:12px;padding:0 12px;">
+          <div style="width:34px;height:34px;border-radius:10px;background:#029cda;color:#fff;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></div>
+          <div style="flex:1;min-width:0;"><div style="font-weight:700;font-size:11px;color:rgba(0,0,0,.42);">Correo</div><div style="font-weight:900;font-size:14px;user-select:text;">info@soltraveltour.es</div></div>
+          <div onClick="{{ copyMail }}" style="width:32px;height:32px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(0,0,0,.55);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></div>
+        </div>
+        <div data-hs="m.help.phone" style="align-self:stretch;height:60px;border-radius:16px;background:#f6f8f9;display:flex;align-items:center;gap:12px;padding:0 12px;">
+          <div style="width:34px;height:34px;border-radius:10px;background:#029cda;color:#fff;display:flex;align-items:center;justify-content:center;flex:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+          <div style="flex:1;min-width:0;"><div style="font-weight:700;font-size:11px;color:rgba(0,0,0,.42);">Teléfono</div><div style="font-weight:900;font-size:14px;user-select:text;">+57 601 000 0000</div></div>
+          <div onClick="{{ copyPhone }}" style="width:32px;height:32px;border-radius:10px;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:rgba(0,0,0,.55);"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></div>
+        </div>
+        <div data-hs="m.help.ok" onClick="{{ closeSheet }}" style="align-self:stretch;height:50px;border-radius:16px;background:#029cda;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;cursor:pointer;margin-top:10px;">Aceptar</div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844}}">
+class Component extends DCLogic {
+  homeRef = React.createRef();
+  carRef = React.createRef();
+  componentDidMount() {
+    this._t = setInterval(() => { if (window.SolStore && !this._unsub) { this._unsub = window.SolStore.subscribe(() => this.forceUpdate()); this.forceUpdate(); } }, 50);
+  }
+  componentWillUnmount() { clearInterval(this._t); this._unsub && this._unsub(); }
+  componentDidUpdate() {
+    const S = window.SolStore; if (!S) return; const m = S.state.mini;
+    if (m.screen === 'home' && this._last !== 'home' && this.homeRef.current) this.homeRef.current.scrollTop = m.homeScroll || 0;
+    if (m.screen === 'detail' && this.carRef.current) { const want = m.img * 390; if (Math.abs(this.carRef.current.scrollLeft - want) > 200 && !this._carUser) this.carRef.current.scrollLeft = want; }
+    this._last = m.screen;
+  }
+  lines(desc) {
+    return (desc || '').split('\n').map(t => {
+      const head = t.trim() && t === t.toUpperCase() && /[A-ZÁÉÍÓÚÑ]/.test(t) && !t.startsWith('•');
+      return head ? { text: t, fw: 900, fs: '12px', ls: '0.8px', color: '#000', mh: '0', pt: '0' }
+        : { text: t || ' ', fw: 400, fs: '14.5px', ls: '0', color: 'rgba(0,0,0,.62)', mh: t ? '0' : '14px', pt: '0' };
+    });
+  }
+  renderVals() {
+    const S = window.SolStore;
+    if (!S) return { isToka: true, tokaSlots: [], userName: '' };
+    const st = S.state, m = st.mini, f = S.fmt;
+    const go = (screen, extra) => () => { if (m.screen === 'home' && this.homeRef.current) m.homeScroll = this.homeRef.current.scrollTop; S.setMini(Object.assign({ screen, sheet: null }, extra || {})); };
+    const cart = S.cart();
+    const cartCount = cart.length;
+    const card = (p, kind, i, hsBase) => ({
+      hs: i === 0 ? hsBase : '', open: () => { if (this.homeRef.current) m.homeScroll = this.homeRef.current.scrollTop; S.openDetail(p.id); },
+      img: p.imgs[0], dest: p.dest, name: p.name, meta: p.dest + ' · ' + p.dur, price: f.usd(p.adult),
+      w: kind === 'dest' ? '300px' : '232px', h: kind === 'dest' ? '226px' : '161px', fs: kind === 'dest' ? '16px' : '15px', pfs: kind === 'dest' ? '17px' : '15.5px'
+    });
+    const home = S.home();
+    let firstCard = true;
+    const sections = home.mode === 'sections' ? home.sections.map((s, si) => ({
+      hs: s.kind === 'dest' ? 'm.home.sec.dest' : s.kind === 'best' ? 'm.home.sec.best' : (s.key === home.sections.find(x => x.kind === 'block').key ? 'm.home.sec.block' : ''),
+      title: s.title, countLabel: s.kind === 'block' ? s.count + (s.count === 1 ? ' paquete' : ' paquetes') : '',
+      isDest: s.kind === 'dest', isBest: s.kind === 'best', isBlock: s.kind === 'block',
+      iconBg: s.kind === 'dest' ? 'linear-gradient(135deg,#f0c000,#f06010)' : s.kind === 'best' ? '#000' : '#029cda',
+      items: s.items.map((p, i) => { const c = card(p, s.kind, firstCard ? 0 : 1, 'm.home.card'); firstCard = false; return c; })
+    })) : [];
+    const listItems = home.mode === 'list' ? home.items.map((p, i) => card(p, 'list', i, 'm.home.card')) : [];
+    const destActive = m.dest !== 'all', sortActive = m.sort !== 'rec';
+    const sortNames = { rec: 'Recomendados', asc: 'Menor precio', desc: 'Mayor precio' };
+    const counts = S.destCounts();
+    const destOpts = [{ key: 'all', label: 'Todos los destinos', n: counts.all }].concat(S.DESTS.slice().sort((a, b) => S.BLOCKS.indexOf(a) - S.BLOCKS.indexOf(b)).map(d => ({ key: d, label: d, n: counts[d] }))).map(o => {
+      const on = m.dest === o.key;
+      return { label: o.label, count: o.n + (o.n === 1 ? ' paquete' : ' paquetes'), isAll: o.key === 'all', isPin: o.key !== 'all', bg: on ? '#ebf7fc' : 'transparent', iconBg: on ? '#029cda' : '#f6f8f9', iconFg: on ? '#fff' : '#029cda', radioRing: on ? 'none' : 'inset 0 0 0 1.5px rgba(0,0,0,.14)', radioBg: on ? '#029cda' : '#fff', dot: on ? 1 : 0, pick: () => S.setMini({ dest: o.key, sheet: null }) };
+    });
+    const sortOpts = [['rec', 'Recomendados'], ['asc', 'Precio: menor a mayor'], ['desc', 'Precio: mayor a menor']].map(([k, label]) => {
+      const on = m.sort === k;
+      return { label, isStar: k === 'rec', isArrow: k !== 'rec', bg: on ? '#ebf7fc' : 'transparent', iconBg: on ? '#029cda' : '#f6f8f9', iconFg: on ? '#fff' : '#029cda', radioRing: on ? 'none' : 'inset 0 0 0 1.5px rgba(0,0,0,.14)', radioBg: on ? '#029cda' : '#fff', dot: on ? 1 : 0, pick: () => S.setMini({ sort: k, sheet: null }) };
+    });
+
+    // detail
+    let det = {};
+    if (m.screen === 'detail' && m.pid) {
+      const p = S.pkg(m.pid); const inCart = cart.find(l => l.pid === p.id);
+      const k = p.child ? m.k : 0; const total = m.a * p.adult + k * (p.child || 0);
+      det = {
+        imgs: p.imgs, dots: p.imgs.map((_, i) => ({ w: i === m.img ? '20px' : '6px', bg: i === m.img ? '#fff' : 'rgba(255,255,255,.6)' })), counter: (m.img + 1) + ' /' + p.imgs.length,
+        dest: p.dest, dur: p.dur, name: p.name, adult: f.usd(p.adult), child: p.child ? f.usd(p.child) : '', hasChild: !!p.child,
+        until: 'Disponible hasta ' + f.long(p.end), lines: this.lines(p.desc), descOpen: m.descOpen, descClosed: !m.descOpen,
+        descMax: m.descOpen ? 'none' : '170px', showFade: !m.descOpen, moreLabel: m.descOpen ? 'Ver menos' : 'Ver descripción completa',
+        padBottom: m.travOpen ? '330px' : '200px', travOpen: m.travOpen, travClosed: !m.travOpen,
+        travPad: m.travOpen ? '12px' : '0', travBorder: m.travOpen ? '1px solid rgba(0,0,0,.08)' : 'none',
+        travLabel: f.trav(m.a, k), toggleLabel: m.travOpen ? 'Minimizar' : 'Editar', toggleBg: m.travOpen ? '#f6f8f9' : '#029cda', toggleFg: m.travOpen ? 'rgba(0,0,0,.62)' : '#fff',
+        a: m.a, k, decAColor: m.a <= 1 ? 'rgba(0,0,0,.2)' : '#000', decKColor: k <= 0 ? 'rgba(0,0,0,.2)' : '#000',
+        total: f.usd(total), addLabel: inCart ? 'Actualizar carrito' : 'Agregar al carrito'
+      };
+    }
+
+    // cart
+    if (m.screen === 'cart') S.ensureForm();
+    const lines = cart.map(S.cartLine);
+    const cartLines = lines.map((l, i) => ({
+      hs: i === 0 ? 'm.cart.item' : (!l.ok ? 'm.cart.na' : ''), hsDel: i === 0 ? 'm.cart.del' : '',
+      img: l.p.imgs[0], imgOp: l.ok ? 1 : .45, name: l.p.name, dur: l.p.dur, na: !l.ok, ok: l.ok, hasChild: !!l.p.child,
+      a: l.a, k: l.k, sub: f.usd(l.sub), subOrNa: l.ok ? f.usd(l.sub) : 'No disponible',
+      decAColor: l.a <= 1 ? 'rgba(0,0,0,.2)' : '#000', decKColor: l.k <= 0 ? 'rgba(0,0,0,.2)' : '#000',
+      decA: () => S.cartQty(l.p.id, 'a', -1), incA: () => S.cartQty(l.p.id, 'a', 1), decK: () => S.cartQty(l.p.id, 'k', -1), incK: () => S.cartQty(l.p.id, 'k', 1),
+      remove: () => S.cartRemove(l.p.id)
+    }));
+    const naIdx = lines.findIndex(l => !l.ok); if (naIdx > 0) cartLines[naIdx].hs = 'm.cart.na';
+    if (naIdx === 0) cartLines[0].hs = 'm.cart.na';
+    const fm = m.form || {};
+    const defs = [['name', 'Nombre completo', 'Nombre y apellidos', 'text', 'iUser'], ['doc', 'Documento de identidad', 'Número de documento', 'text', 'iDoc'], ['pass', 'Número de pasaporte', 'Letras y números', 'text', 'iPass'], ['email', 'Correo electrónico', 'tucorreo@ejemplo.com', 'email', 'iMail'], ['phone', 'Celular', 'Solo números', 'numeric', 'iPhone']];
+    const fields = defs.map(([key, label, ph, mode, ic]) => {
+      const v = fm[key] || ''; const e = S.fieldErr(key, v); const show = m.touched[key] && e;
+      const o = { hs: 'm.cart.f.' + key, label, ph, mode, value: v, err: show ? e : '', ok: !e, ring: show ? 'inset 0 0 0 1.5px #f06010' : 'none', iconColor: show ? '#f06010' : 'rgba(0,0,0,.45)',
+        onChange: ev => { fm[key] = ev.target.value; S.emit(); }, onBlur: () => { m.touched[key] = true; S.emit(); } };
+      o.iUser = ic === 'iUser'; o.iDoc = ic === 'iDoc'; o.iPass = ic === 'iPass'; o.iMail = ic === 'iMail'; o.iPhone = ic === 'iPhone';
+      return o;
+    });
+    const canPay = S.canPay();
+
+    // result
+    let res = {};
+    if (m.screen === 'result' && m.result && m.result.ok) {
+      const o = m.result.order;
+      res = { orderId: '#' + o.id, total: f.usd(o.total), items: o.items.map(i => ({ label: i.name + ' · ' + f.trav(i.a, i.k), amount: f.usd(i.a * i.pa + (i.k || 0) * (i.pk || 0)) })) };
+    }
+    // trips
+    const tl = S.trips();
+    const firstChanged = tl.findIndex(t => t.changed);
+    const trips = tl.map((t, i) => ({
+      hs: i === 0 ? 'm.trips.card' : '', hsChange: i === firstChanged ? 'm.trips.change' : '', img: t.p.imgs[0], name: t.i.name,
+      orderLine: 'Orden #' + t.o.id + ' · ' + f.short2(t.o.date), trav: f.trav(t.i.a, t.i.k), paid: f.usd(t.paid), changed: t.changed,
+      open: () => S.setMini({ screen: 'trip', trip: { oid: t.o.id, pid: t.i.pid } })
+    }));
+    let trip = {};
+    if (m.screen === 'trip' && m.trip) {
+      const t = tl.find(x => x.o.id === m.trip.oid && x.i.pid === m.trip.pid) || tl[0];
+      if (t) {
+        const h = t.o.holder;
+        trip = { changed: t.changed, rows: [{ k: 'Número de orden', v: '#' + t.o.id }, { k: 'Fecha', v: f.long(t.o.date) }, { k: 'Viajeros', v: f.trav(t.i.a, t.i.k) }, { k: 'Valor pagado', v: f.usd(t.paid) }],
+          holder: [{ k: 'Nombre completo', v: h.name }, { k: 'Documento de identidad', v: h.doc }, { k: 'Pasaporte', v: h.pass }, { k: 'Correo', v: h.email }, { k: 'Celular', v: h.phone }],
+          cover: t.p.imgs[0], thumbs: t.p.imgs.slice(1), name: t.p.name, dest: t.p.dest, dur: t.p.dur, lines: this.lines(t.p.desc) };
+      }
+    }
+
+    const screen = m.screen;
+    const tab = screen === 'cart' ? 'cart' : (screen === 'trips' || screen === 'trip') ? 'trips' : 'home';
+    const helpOpen = m.sheet === 'help';
+    const nav = [['home', 'Inicio', 'iHome', 'm.nav.home'], ['cart', 'Carrito', 'iCart', 'm.nav.cart'], ['trips', 'Mis viajes', 'iTrips', 'm.nav.trips'], ['help', 'Ayuda', 'iHelp', 'm.nav.help']].map(([k, text, ic, hs]) => {
+      const on = helpOpen ? k === 'help' : k === tab && screen !== 'result';
+      const o = { hs, text, bg: on ? '#029cda' : 'transparent', shadow: on ? '0 6px 14px rgba(2,156,218,.35)' : 'none', fg: on ? '#fff' : 'rgba(0,0,0,.45)', label: on ? '#000' : 'rgba(0,0,0,.42)', badge: k === 'cart' && cartCount ? String(cartCount) : '',
+        go: k === 'help' ? () => S.setMini({ sheet: 'help' }) : go(k === 'home' ? 'home' : k === 'cart' ? 'cart' : 'trips') };
+      o.iHome = ic === 'iHome'; o.iCart = ic === 'iCart'; o.iTrips = ic === 'iTrips'; o.iHelp = ic === 'iHelp';
+      return o;
+    });
+    const copy = (txt) => () => { try { navigator.clipboard.writeText(txt); } catch (e) {} };
+
+    return {
+      userName: S.users[m.user].name, tokaSlots: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], openSol: () => S.setMini({ screen: 'home', sheet: null }),
+      isToka: screen === 'toka', isHome: screen === 'home', isDetail: screen === 'detail', isCart: screen === 'cart', isTrips: screen === 'trips', isTrip: screen === 'trip',
+      isResultOk: screen === 'result' && m.result && m.result.ok, isResultFail: screen === 'result' && m.result && !m.result.ok,
+      homeRef: this.homeRef, carRef: this.carRef,
+      destLabel: m.dest === 'all' ? 'Todos' : m.dest, sortLabel: sortNames[m.sort],
+      destChipBg: destActive ? '#ebf7fc' : '#f6f8f9', destChipBd: destActive ? 'inset 0 0 0 1px #029cda' : 'none', destIconBg: destActive ? '#029cda' : '#fff', destIconFg: destActive ? '#fff' : '#029cda',
+      sortChipBg: sortActive ? '#ebf7fc' : '#f6f8f9', sortChipBd: sortActive ? 'inset 0 0 0 1px #029cda' : 'none', sortIconBg: sortActive ? '#029cda' : '#fff', sortIconFg: sortActive ? '#fff' : '#029cda',
+      clearBg: destActive || sortActive ? '#fe8f09' : '#f6f8f9', clearFg: destActive || sortActive ? '#fff' : 'rgba(0,0,0,.42)', clearShadow: destActive || sortActive ? '0 10px 24px rgba(254,143,9,.35)' : 'none',
+      openDestSheet: () => S.setMini({ sheet: 'dest' }), openSortSheet: () => S.setMini({ sheet: 'sort' }), clearFilters: () => S.setMini({ dest: 'all', sort: 'rec' }),
+      allDests: () => S.setMini({ dest: 'all' }),
+      homeSections: home.mode === 'sections', homeList: home.mode === 'list' && !home.empty, homeEmpty: home.empty,
+      sections, listItems, listTitle: home.title, listCount: (home.count || 0) + (home.count === 1 ? ' paquete' : ' paquetes'),
+      det, goHome: go('home'), goCart: go('cart', { toast: null }), goTrips: go('trips'),
+      onCarScroll: ev => { const i = Math.round(ev.target.scrollLeft / 390); if (i !== m.img) { this._carUser = true; S.setMini({ img: i }); setTimeout(() => this._carUser = false, 300); } },
+      toggleDesc: () => S.setMini({ descOpen: !m.descOpen }), toggleTrav: () => S.setMini({ travOpen: !m.travOpen }),
+      decA: () => S.setMini({ a: Math.max(1, m.a - 1) }), incA: () => S.setMini({ a: m.a + 1 }), decK: () => S.setMini({ k: Math.max(0, m.k - 1) }), incK: () => S.setMini({ k: m.k + 1 }),
+      addToCart: () => S.addToCart(),
+      cartEmpty: cartCount === 0, cartHasItems: cartCount > 0, cartCount: String(cartCount), cartLines, cartTotal: f.usd(S.cartTotal()), cartBottom: cartCount ? '164px' : '84px',
+      prefillNote: fm._src === 'saved' ? 'Usamos los datos de tu última compra. Puedes editarlos.' : 'Completamos algunos datos con tu cuenta TOKA. Puedes editarlos.',
+      fields, payBg: canPay ? '#029cda' : '#d9dde0', payFg: canPay ? '#fff' : 'rgba(0,0,0,.45)', payShadow: canPay ? '0 10px 24px rgba(2,156,218,.32)' : 'none', payCursor: canPay ? 'pointer' : 'not-allowed',
+      pay: () => { if (S.canPay()) S.setMini({ sheet: 'pay' }); else { ['name', 'doc', 'pass', 'email', 'phone'].forEach(k => m.touched[k] = true); S.emit(); } },
+      payNote: cartCount + (cartCount === 1 ? ' paquete' : ' paquetes') + ' · TOKA convierte el valor a pesos mexicanos',
+      approve: () => S.approvePay(), reject: () => S.rejectPay(),
+      res, trips, tripsEmpty: trips.length === 0, trip,
+      sbBg: screen === 'toka' || screen === 'detail' ? 'transparent' : '#fff', sbFg: screen === 'toka' || screen === 'detail' ? '#fff' : '#000',
+      showNav: screen !== 'toka' && screen !== 'detail', nav,
+      toast: m.toast, toastBottom: screen === 'detail' ? (m.travOpen ? '268px' : '150px') : '96px',
+      sheetOpen: !!m.sheet, sheetDest: m.sheet === 'dest', sheetSort: m.sheet === 'sort', sheetPay: m.sheet === 'pay', sheetHelp: helpOpen,
+      destOpts, sortOpts, closeSheet: () => S.setMini({ sheet: null }), copyMail: copy('info@soltraveltour.es'), copyPhone: copy('+57 601 000 0000')
+    };
+  }
+}
+
+</script>
+</body>
+</html>

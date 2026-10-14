@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Sol Travel × TOKA · Prototipo explicativo</title>
+<link rel="stylesheet" href="_ds/wigi-design-system-ef477c14-3c6e-4d00-bd78-9401c685bc3b/colors_and_type.css">
+<link rel="stylesheet" href="_ds/wigi-design-system-ef477c14-3c6e-4d00-bd78-9401c685bc3b/styles.css">
+<script src="_ds/wigi-design-system-ef477c14-3c6e-4d00-bd78-9401c685bc3b/_ds_bundle.js"></script>
+<script src="store.js"></script>
+<script src="docs.js"></script>
+<style>
+html,body{margin:0;padding:0;background:#FFFFFF;height:100%;}
+a{color:#0031EC;text-decoration:none;}
+a:hover{color:#2944FF;text-decoration:underline;}
+@keyframes hsPulse{0%{box-shadow:0 0 0 0 rgba(0,49,236,.45)}100%{box-shadow:0 0 0 12px rgba(0,49,236,0)}}
+</style>
+</helmet>
+<div style="height:100vh;display:flex;flex-direction:column;background:#FFFFFF;color:#0A0A0A;font-family:var(--wigi-font-body);overflow:hidden;">
+
+  <!-- ===== Barra superior ===== -->
+  <div style="height:64px;flex:none;display:flex;align-items:center;gap:20px;padding:0 24px;border-bottom:1px solid #EBEBEB;background:#FFFFFF;z-index:5;">
+    <div style="display:flex;align-items:center;gap:10px;flex:none;">
+      <svg width="30" height="20" viewBox="0 0 240 163"><path fill="#0A0A0A" d="M 240 0 L 197.034 0 L 167.305 105.096 L 136.34 0.012 L 103.684 0.012 L 70.295 105.096 L 42.906 0.012 L 0 0.012 L 47.167 163 L 88.657 163 L 119.13 68.568 L 147.754 163 L 189.46 163 L 240 0 Z"></path></svg>
+      <div style="font-family:var(--wigi-font-display);font-weight:900;font-size:18px;letter-spacing:-0.02em;">wigilabs</div>
+    </div>
+    <div style="width:1px;height:24px;background:#E0E0E0;flex:none;"></div>
+    <div style="display:flex;flex-direction:column;min-width:0;flex:0 1 auto;overflow:hidden;">
+      <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:15px;white-space:nowrap;">Sol Travel × TOKA</div>
+      <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#666666;white-space:nowrap;">Prototipo explicativo</div>
+    </div>
+    <div style="flex:1;"></div>
+    <div style="display:flex;gap:4px;background:#F5F5F5;border-radius:999px;padding:4px;flex:none;">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+        <div onClick="{{ t.go }}" style="height:36px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};box-shadow:{{ t.shadow }};display:flex;align-items:center;padding:0 16px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;">{{ t.label }}</div>
+      </sc-for>
+    </div>
+    <div style="flex:1;"></div>
+    <div onClick="{{ resetAll }}" style="height:36px;border-radius:999px;box-shadow:inset 0 0 0 1px #DADADA;display:flex;align-items:center;gap:8px;padding:0 14px;font-weight:600;font-size:13px;color:#333333;cursor:pointer;white-space:nowrap;flex:none;">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+      Reiniciar datos
+    </div>
+  </div>
+
+  <!-- ===== RESUMEN ===== -->
+  <sc-if value="{{ isResumen }}" hint-placeholder-val="{{ true }}">
+    <div style="flex:1;overflow-y:auto;overflow-x:hidden;">
+      <div style="max-width:1160px;margin:0 auto;padding:64px 40px 80px;display:flex;flex-direction:column;gap:56px;">
+        <div style="display:flex;flex-direction:column;gap:20px;max-width:860px;">
+          <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#0031EC;">Alcance detallado · Octubre 2026</div>
+          <div style="font-family:var(--wigi-font-display);font-weight:900;font-size:64px;line-height:1;letter-spacing:-0.03em;">Mini program de Sol Travel en TOKA</div>
+          <sc-for list="{{ intro }}" as="p" hint-placeholder-count="2">
+            <div style="font-size:17px;line-height:1.65;color:#333333;text-wrap:pretty;">{{ p }}</div>
+          </sc-for>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;">
+          <sc-for list="{{ parts }}" as="pt" hint-placeholder-count="2">
+            <div style="border-radius:20px;box-shadow:inset 0 0 0 1px #E6E6E6;padding:28px;display:flex;flex-direction:column;gap:16px;">
+              <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#666666;">{{ pt.eyebrow }}</div>
+              <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:30px;letter-spacing:-0.015em;">{{ pt.title }}</div>
+              <div style="font-size:15.5px;line-height:1.55;color:#333333;">{{ pt.text }}</div>
+              <div style="display:flex;flex-direction:column;gap:8px;padding:4px 0 8px;">
+                <sc-for list="{{ pt.list }}" as="li" hint-placeholder-count="4"><div style="display:flex;gap:10px;align-items:baseline;font-size:14.5px;color:#333333;"><div style="width:6px;height:6px;border-radius:50%;background:#0031EC;flex:none;transform:translateY(-2px);"></div>{{ li }}</div></sc-for>
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;">
+                <div onClick="{{ pt.tour }}" style="height:44px;border-radius:999px;background:#0031EC;color:#FFFFFF;display:flex;align-items:center;gap:8px;padding:0 20px;font-weight:600;font-size:14px;cursor:pointer;">Iniciar recorrido guiado
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
+                <div onClick="{{ pt.free }}" style="height:44px;border-radius:999px;box-shadow:inset 0 0 0 1px #0A0A0A;display:flex;align-items:center;padding:0 20px;font-weight:600;font-size:14px;cursor:pointer;">Explorar libremente</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:26px;letter-spacing:-0.015em;">Cómo recorrer el prototipo</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;">
+            <sc-for list="{{ howto }}" as="h" hint-placeholder-count="4">
+              <div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:2px solid #0A0A0A;">
+                <div style="font-family:var(--wigi-font-meta);font-weight:700;font-size:13px;color:#0031EC;">{{ h.n }}</div>
+                <div style="font-weight:600;font-size:16px;">{{ h.t }}</div>
+                <div style="font-size:14.5px;line-height:1.55;color:#555555;">{{ h.d }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;">
+          <div style="border-radius:20px;background:#F5F5F5;padding:26px 28px;display:flex;flex-direction:column;gap:12px;">
+            <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#666666;">Datos de prueba</div>
+            <sc-for list="{{ testData }}" as="d" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:160px 1fr;gap:12px;font-size:14px;line-height:1.5;"><div style="color:#666666;">{{ d.k }}</div><div style="color:#0A0A0A;">{{ d.v }}</div></div>
+            </sc-for>
+          </div>
+          <div style="border-radius:20px;box-shadow:inset 0 0 0 1.5px #0031EC;padding:26px 28px;display:flex;flex-direction:column;gap:12px;">
+            <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:#0031EC;">Por confirmar</div>
+            <sc-for list="{{ confirmList }}" as="c" hint-placeholder-count="2"><div style="font-size:14.5px;line-height:1.55;color:#0A0A0A;">{{ c }}</div></sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== PROPUESTA ===== -->
+  <sc-if value="{{ isPropuesta }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1;overflow-y:auto;overflow-x:hidden;">
+      <div style="max-width:1000px;margin:0 auto;padding:56px 40px 80px;display:flex;flex-direction:column;gap:40px;">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#0031EC;">Propuesta</div>
+          <div style="font-family:var(--wigi-font-display);font-weight:900;font-size:48px;line-height:1.05;letter-spacing:-0.03em;text-wrap:pretty;">Un socio de negocio, no un proveedor</div>
+          <div style="font-size:18px;line-height:1.6;color:#333333;max-width:760px;text-wrap:pretty;">Wigilabs actuará como socio de negocio de Sol Travel en un modelo donde asume parte del costo del proyecto a cambio de un porcentaje del revenue shared. El modelo está descrito en detalle en la propuesta adjunta.</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+          <div style="border-radius:16px;box-shadow:inset 0 0 0 1px #E6E6E6;padding:24px;display:flex;flex-direction:column;gap:10px;">
+            <div style="font-family:var(--wigi-font-meta);font-weight:700;font-size:13px;color:#0031EC;">01</div>
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:20px;">Riesgo compartido</div>
+            <div style="font-size:15px;line-height:1.55;color:#333333;">Wigilabs invierte junto a Sol Travel. Una parte del costo se cubre con los ingresos que genere el nuevo canal en TOKA.</div>
+          </div>
+          <div style="border-radius:16px;box-shadow:inset 0 0 0 1px #E6E6E6;padding:24px;display:flex;flex-direction:column;gap:10px;">
+            <div style="font-family:var(--wigi-font-meta);font-weight:700;font-size:13px;color:#0031EC;">02</div>
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:20px;">Objetivos alineados</div>
+            <div style="font-size:15px;line-height:1.55;color:#333333;">A Wigilabs le va bien cuando Sol Travel vende. El éxito se mide en paquetes vendidos, no en horas entregadas.</div>
+          </div>
+          <div style="border-radius:16px;box-shadow:inset 0 0 0 1px #E6E6E6;padding:24px;display:flex;flex-direction:column;gap:10px;">
+            <div style="font-family:var(--wigi-font-meta);font-weight:700;font-size:13px;color:#0031EC;">03</div>
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:20px;">Evolución continua</div>
+            <div style="font-size:15px;line-height:1.55;color:#333333;">Acompañamos el canal después del lanzamiento para que crezca con el negocio.</div>
+          </div>
+        </div>
+        <div style="border-radius:20px;background:#0A0A0A;color:#FAFAFA;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 320px;">
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:24px;">Descarga la propuesta</div>
+            <div style="font-size:15px;line-height:1.5;color:#A3A3A3;">El modelo de revenue share, la inversión de cada parte y las condiciones están en el PDF.</div>
+          </div>
+          <a href="/api/propuesta" style="height:52px;border-radius:999px;background:#0031EC;color:#FFFFFF;display:flex;align-items:center;gap:10px;padding:0 26px;font-weight:600;font-size:16px;text-decoration:none;white-space:nowrap;flex:none;" style-hover="background:#2944FF;color:#FFFFFF;text-decoration:none;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+            Descargar la propuesta
+          </a>
+        </div>
+        <div style="font-family:var(--wigi-font-display);font-style:italic;font-size:20px;color:#666666;">evolve with a partner / not a provider</div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== REGLAS Y GLOSARIO ===== -->
+  <sc-if value="{{ isReglas }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1;overflow-y:auto;overflow-x:hidden;">
+      <div style="max-width:1000px;margin:0 auto;padding:56px 40px 80px;display:flex;flex-direction:column;gap:48px;">
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#0031EC;">Referencia</div>
+          <div style="font-family:var(--wigi-font-display);font-weight:900;font-size:48px;line-height:1.05;letter-spacing:-0.03em;">Reglas, estados y alcance</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:24px;">Estados del paquete</div>
+          <div style="border-radius:16px;box-shadow:inset 0 0 0 1px #E6E6E6;overflow:hidden;display:grid;grid-template-columns:160px minmax(0,1fr) 190px 130px;">
+            <sc-for list="{{ estadoCols }}" as="c" hint-placeholder-count="4"><div style="background:#F5F5F5;padding:12px 16px;font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#666666;">{{ c }}</div></sc-for>
+            <sc-for list="{{ estados }}" as="e" hint-placeholder-count="4">
+              <div style="display:contents;">
+                <div style="padding:14px 16px;border-top:1px solid #EBEBEB;"><span style="display:inline-flex;align-items:center;gap:7px;height:26px;border-radius:999px;background:{{ e.bg }};color:{{ e.fg }};padding:0 11px;font-weight:600;font-size:13px;"><span style="width:7px;height:7px;border-radius:2px;background:{{ e.fg }};"></span>{{ e.name }}</span></div>
+                <div style="padding:14px 16px;border-top:1px solid #EBEBEB;font-size:14.5px;color:#333333;display:flex;align-items:center;">{{ e.cond }}</div>
+                <div style="padding:14px 16px;border-top:1px solid #EBEBEB;font-size:14.5px;color:#333333;display:flex;align-items:center;">{{ e.vis }}</div>
+                <div style="padding:14px 16px;border-top:1px solid #EBEBEB;font-size:14.5px;color:#333333;display:flex;align-items:center;">{{ e.tab }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="font-size:14px;color:#666666;">Los cambios de estado por fecha son automáticos. Activar un paquete desactivado lo devuelve al estado que le corresponde por su vigencia.</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;">
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:22px;">Reglas generales del mini program</div>
+            <sc-for list="{{ reglasMini }}" as="r" hint-placeholder-count="5"><div style="display:flex;gap:10px;font-size:14.5px;line-height:1.55;color:#333333;"><div style="width:6px;height:6px;border-radius:50%;background:#0031EC;flex:none;margin-top:8px;"></div>{{ r }}</div></sc-for>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:22px;">Reglas generales del administrador</div>
+            <sc-for list="{{ reglasAdmin }}" as="r" hint-placeholder-count="4"><div style="display:flex;gap:10px;font-size:14.5px;line-height:1.55;color:#333333;"><div style="width:6px;height:6px;border-radius:50%;background:#0031EC;flex:none;margin-top:8px;"></div>{{ r }}</div></sc-for>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+          <div style="border-radius:20px;background:#F5F5F5;padding:26px 28px;display:flex;flex-direction:column;gap:12px;">
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:22px;">Fuera de alcance</div>
+            <sc-for list="{{ fuera }}" as="r" hint-placeholder-count="4"><div style="display:flex;gap:10px;font-size:14.5px;line-height:1.55;color:#333333;"><div style="width:10px;height:2px;background:#0A0A0A;flex:none;margin-top:11px;"></div>{{ r }}</div></sc-for>
+          </div>
+          <div style="border-radius:20px;box-shadow:inset 0 0 0 1.5px #0031EC;padding:26px 28px;display:flex;flex-direction:column;gap:12px;">
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:22px;color:#0031EC;">Por confirmar</div>
+            <sc-for list="{{ confirmList }}" as="c" hint-placeholder-count="2"><div style="font-size:14.5px;line-height:1.55;color:#0A0A0A;">{{ c }}</div></sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ===== PROTOTIPOS ===== -->
+  <sc-if value="{{ isProto }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1;min-height:0;display:flex;">
+      <!-- Escenario -->
+      <div ref="{{ stageRef }}" style="position:relative;flex:1;min-width:0;background:#F5F5F5;overflow:hidden;">
+        <div style="position:absolute;left:24px;top:18px;display:flex;align-items:center;gap:8px;font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#666666;z-index:2;white-space:nowrap;">
+          <div style="width:8px;height:8px;border-radius:50%;background:#00E56B;"></div>{{ stageLabel }}
+        </div>
+        <div style="position:absolute;left:{{ dev.left }};top:{{ dev.top }};width:{{ dev.w }};height:{{ dev.h }};">
+          <div style="position:absolute;left:0;top:0;width:{{ dev.innerW }};height:{{ dev.innerH }};transform:scale({{ dev.s }});transform-origin:0 0;">
+            <sc-if value="{{ isMini }}" hint-placeholder-val="{{ true }}">
+              <div style="width:414px;height:868px;border-radius:64px;background:#0A0A0A;padding:12px;box-sizing:border-box;box-shadow:0 30px 80px rgba(0,0,0,.18),inset 0 0 0 2px #2a2a2a;position:relative;">
+                <div style="position:relative;width:390px;height:844px;border-radius:52px;overflow:hidden;background:#fff;">
+                  <dc-import name="MiniProgram" hint-size="390px,844px"></dc-import>
+                  <div style="position:absolute;left:135px;top:11px;width:120px;height:34px;border-radius:20px;background:#0A0A0A;z-index:60;pointer-events:none;"></div>
+                  <div style="position:absolute;left:128px;bottom:8px;width:134px;height:5px;border-radius:3px;background:rgba(0,0,0,.85);z-index:60;pointer-events:none;"></div>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{ isAdmin }}" hint-placeholder-val="{{ false }}">
+              <div style="width:1600px;height:944px;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 30px 80px rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.08);">
+                <div style="height:44px;background:#EDEDED;display:flex;align-items:center;gap:16px;padding:0 16px;">
+                  <div style="display:flex;gap:8px;"><div style="width:12px;height:12px;border-radius:50%;background:#FF5F57;"></div><div style="width:12px;height:12px;border-radius:50%;background:#FEBC2E;"></div><div style="width:12px;height:12px;border-radius:50%;background:#28C840;"></div></div>
+                  <div style="flex:1;display:flex;justify-content:center;"><div style="height:28px;width:520px;border-radius:8px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:#555555;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>{{ adminUrl }}</div></div>
+                  <div style="width:52px;"></div>
+                </div>
+                <dc-import name="Admin" hint-size="1600px,900px"></dc-import>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+
+        <!-- Puntos numerados -->
+        <sc-if value="{{ hlBox }}">
+          <div style="position:absolute;left:{{ hlBox.l }};top:{{ hlBox.t }};width:{{ hlBox.w }};height:{{ hlBox.h }};border-radius:10px;box-shadow:0 0 0 2px #0031EC,0 0 0 6px rgba(0,49,236,.15);background:rgba(0,49,236,.06);pointer-events:none;z-index:20;"></div>
+        </sc-if>
+        <sc-if value="{{ showMarkers }}">
+          <sc-for list="{{ markers }}" as="mk" hint-placeholder-count="0">
+            <div onClick="{{ mk.pick }}" onMouseEnter="{{ mk.enter }}" onMouseLeave="{{ mk.leave }}" style="position:absolute;left:{{ mk.x }};top:{{ mk.y }};width:24px;height:24px;border-radius:50%;background:{{ mk.bg }};color:#FFFFFF;box-shadow:0 0 0 2px #FFFFFF,0 4px 10px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;font-family:var(--wigi-font-meta);font-weight:700;font-size:11.5px;cursor:pointer;z-index:21;animation:{{ mk.anim }};">{{ mk.n }}</div>
+          </sc-for>
+        </sc-if>
+      </div>
+
+      <!-- Panel explicativo -->
+      <div style="width:430px;flex:none;display:flex;flex-direction:column;border-left:1px solid #EBEBEB;background:#FFFFFF;min-height:0;">
+        <div style="flex:none;padding:16px 22px;border-bottom:1px solid #EBEBEB;display:flex;align-items:center;gap:12px;">
+          <div style="display:flex;background:#F5F5F5;border-radius:999px;padding:3px;flex:1;">
+            <div onClick="{{ setTour }}" style="flex:1;height:32px;border-radius:999px;background:{{ modeTourBg }};color:{{ modeTourFg }};box-shadow:{{ modeTourShadow }};display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap;">Recorrido guiado</div>
+            <div onClick="{{ setFree }}" style="flex:1;height:32px;border-radius:999px;background:{{ modeFreeBg }};color:{{ modeFreeFg }};box-shadow:{{ modeFreeShadow }};display:flex;align-items:center;justify-content:center;font-weight:600;font-size:13px;cursor:pointer;white-space:nowrap;">Explorar libre</div>
+          </div>
+          <div onClick="{{ toggleHs }}" style="display:flex;align-items:center;gap:8px;cursor:pointer;flex:none;">
+            <div style="width:38px;height:22px;border-radius:999px;background:{{ hsTrack }};position:relative;"><div style="position:absolute;top:3px;left:{{ hsKnob }};width:16px;height:16px;border-radius:50%;background:#FFFFFF;box-shadow:0 1px 3px rgba(0,0,0,.25);"></div></div>
+            <div style="font-size:13px;font-weight:600;color:#333333;">Puntos</div>
+          </div>
+        </div>
+
+        <div ref="{{ panelRef }}" style="flex:1;overflow-y:auto;overflow-x:hidden;padding:22px 22px 28px;display:flex;flex-direction:column;gap:22px;">
+          <sc-if value="{{ isTour }}">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                <sc-for list="{{ chapters }}" as="c" hint-placeholder-count="3">
+                  <div onClick="{{ c.go }}" style="height:28px;border-radius:999px;background:{{ c.bg }};color:{{ c.fg }};box-shadow:{{ c.ring }};display:flex;align-items:center;padding:0 12px;font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap;">{{ c.label }}</div>
+                </sc-for>
+              </div>
+              <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#0031EC;padding-top:6px;">{{ stepEyebrow }}</div>
+              <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:28px;line-height:1.12;letter-spacing:-0.015em;">{{ step.title }}</div>
+              <div style="font-size:15px;line-height:1.6;color:#333333;text-wrap:pretty;">{{ step.text }}</div>
+              <sc-if value="{{ diverged }}">
+                <div style="border-radius:14px;background:#F5F5F5;padding:12px 14px;display:flex;align-items:center;gap:10px;font-size:13.5px;color:#333333;line-height:1.4;">
+                  <div style="flex:1;">Navegaste a otra pantalla. El panel describe lo que ves ahora.</div>
+                  <div onClick="{{ replayStep }}" style="height:32px;border-radius:999px;background:#0A0A0A;color:#FFFFFF;display:flex;align-items:center;padding:0 12px;font-size:12.5px;font-weight:600;cursor:pointer;white-space:nowrap;flex:none;">Volver al paso</div>
+                </div>
+              </sc-if>
+            </div>
+          </sc-if>
+
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#666666;">{{ scrEyebrow }}</div>
+            <div style="font-family:var(--wigi-font-display);font-weight:700;font-size:{{ scrTitleSize }};line-height:1.15;letter-spacing:-0.01em;">{{ scr.title }}</div>
+            <sc-if value="{{ isFree }}"><div style="font-size:15px;line-height:1.6;color:#333333;margin-top:4px;text-wrap:pretty;">{{ scr.intro }}</div></sc-if>
+            <sc-if value="{{ isTour }}"><div style="font-size:14px;line-height:1.55;color:#555555;margin-top:2px;text-wrap:pretty;">{{ scr.intro }}</div></sc-if>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:2px;">
+            <sc-for list="{{ items }}" as="it" hint-placeholder-count="5">
+              <div data-item="{{ it.hs }}" onClick="{{ it.pick }}" onMouseEnter="{{ it.enter }}" onMouseLeave="{{ it.leave }}" style="display:flex;gap:12px;padding:10px 10px;border-radius:12px;background:{{ it.bg }};cursor:pointer;">
+                <div style="width:24px;height:24px;border-radius:50%;background:{{ it.dot }};color:#FFFFFF;display:flex;align-items:center;justify-content:center;font-family:var(--wigi-font-meta);font-weight:700;font-size:11.5px;flex:none;">{{ it.n }}</div>
+                <div style="display:flex;flex-direction:column;gap:3px;min-width:0;">
+                  <div style="font-weight:600;font-size:14.5px;color:#0A0A0A;">{{ it.t }}</div>
+                  <div style="font-size:13.5px;line-height:1.5;color:#555555;text-wrap:pretty;">{{ it.d }}</div>
+                </div>
+              </div>
+            </sc-for>
+            <sc-if value="{{ noItems }}"><div style="font-size:13.5px;color:#666666;">Sin elementos señalados en este estado.</div></sc-if>
+          </div>
+
+          <sc-if value="{{ hasRules }}">
+            <div style="display:flex;flex-direction:column;gap:10px;padding-top:4px;">
+              <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#666666;">Reglas de negocio</div>
+              <sc-for list="{{ scr.rules }}" as="r" hint-placeholder-count="3"><div style="display:flex;gap:10px;font-size:13.5px;line-height:1.55;color:#333333;"><div style="width:5px;height:5px;border-radius:50%;background:#0A0A0A;flex:none;margin-top:8px;"></div>{{ r }}</div></sc-for>
+            </div>
+          </sc-if>
+          <sc-if value="{{ hasConfirm }}">
+            <div style="border-radius:14px;box-shadow:inset 0 0 0 1.5px #0031EC;padding:14px 16px;display:flex;flex-direction:column;gap:6px;">
+              <div style="font-family:var(--wigi-font-meta);font-weight:700;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:#0031EC;">Por confirmar</div>
+              <sc-for list="{{ scr.confirm }}" as="c" hint-placeholder-count="1"><div style="font-size:13.5px;line-height:1.5;color:#0A0A0A;">{{ c }}</div></sc-for>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isFree }}">
+            <div style="display:flex;flex-direction:column;gap:18px;padding-top:6px;border-top:1px solid #EBEBEB;">
+              <div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;">
+                <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#666666;">Ir a una pantalla</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                  <sc-for list="{{ index }}" as="ix" hint-placeholder-count="6"><div onClick="{{ ix.go }}" style="height:32px;border-radius:999px;background:{{ ix.bg }};color:{{ ix.fg }};box-shadow:{{ ix.ring }};display:flex;align-items:center;padding:0 12px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;">{{ ix.label }}</div></sc-for>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="font-family:var(--wigi-font-meta);font-weight:600;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#666666;">Simular escenarios</div>
+                <sc-for list="{{ sims }}" as="sm" hint-placeholder-count="3"><div onClick="{{ sm.run }}" style="min-height:40px;border-radius:12px;box-shadow:inset 0 0 0 1px #DADADA;display:flex;align-items:center;gap:10px;padding:8px 12px;font-size:13.5px;color:#0A0A0A;cursor:pointer;line-height:1.35;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0031EC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>{{ sm.label }}</div></sc-for>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+
+        <sc-if value="{{ isTour }}">
+          <div style="flex:none;border-top:1px solid #EBEBEB;padding:14px 22px 18px;display:flex;flex-direction:column;gap:12px;">
+            <div style="height:4px;border-radius:2px;background:#EBEBEB;overflow:hidden;"><div style="height:100%;width:{{ progress }};background:#0031EC;border-radius:2px;"></div></div>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <div onClick="{{ prevStep }}" style="height:44px;border-radius:999px;box-shadow:inset 0 0 0 1px {{ prevRing }};color:{{ prevFg }};display:flex;align-items:center;gap:8px;padding:0 18px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>Anterior</div>
+              <div style="flex:1;text-align:center;font-family:var(--wigi-font-meta);font-weight:600;font-size:12.5px;color:#666666;white-space:nowrap;">{{ stepCount }}</div>
+              <div onClick="{{ nextStep }}" style="height:44px;border-radius:999px;background:#0031EC;color:#FFFFFF;display:flex;align-items:center;gap:8px;padding:0 20px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;">{{ nextLabel }}<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;startTab&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;resumen&quot;,&quot;mini&quot;,&quot;admin&quot;,&quot;reglas&quot;],&quot;default&quot;:&quot;resumen&quot;,&quot;tsType&quot;:&quot;'resumen'|'mini'|'admin'|'reglas'&quot;},&quot;hotspotsDefault&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  stageRef = React.createRef();
+  panelRef = React.createRef();
+  state = { tab: null, mode: 'tour', step: 0, applied: -1, hs: null, sel: null, hover: null, markers: [], present: [], stage: { w: 1000, h: 800 }, ready: false };
+  componentDidMount() {
+    this.setState({ tab: this.props.startTab || 'resumen', hs: this.props.hotspotsDefault ?? true });
+    window.__solProto = { goStep: i => this.goStep(i), tab: t => this.openTab(t), free: () => this.setState({ mode: 'free' }), st: () => this.state };
+    this._t = setInterval(() => this.tick(), 220);
+    this._wait = setInterval(() => { if (window.SolStore && window.SolDocs) { clearInterval(this._wait); this._unsub = window.SolStore.subscribe(() => this.forceUpdate()); this.setState({ ready: true }); } }, 50);
+  }
+  componentWillUnmount() { clearInterval(this._t); clearInterval(this._wait); this._unsub && this._unsub(); }
+  app() { return this.state.tab === 'admin' ? 'admin' : 'mini'; }
+  docFor(key) { const D = window.SolDocs; return (D && D.SCREENS[key]) || { title: '', intro: '', items: [], rules: [] }; }
+  allItems(key) { const D = window.SolDocs; const d = this.docFor(key); return d.items.concat(D.EXTRA[this.app()] || []); }
+  tick() {
+    const S = window.SolStore, D = window.SolDocs; const stage = this.stageRef.current;
+    if (!S || !D || !stage || (this.state.tab !== 'mini' && this.state.tab !== 'admin')) return;
+    const sr = stage.getBoundingClientRect();
+    const rootSel = this.app() === 'admin' ? '[data-admin-root]' : '[data-mini-root]';
+    const root = stage.querySelector(rootSel);
+    const key = D.screenKey(S, this.app());
+    const items = this.allItems(key);
+    const present = []; const markers = [];
+    if (root) {
+      const rr = root.getBoundingClientRect();
+      const seen = new Set();
+      items.forEach(it => {
+        if (seen.has(it.hs)) return;
+        const el = root.querySelector('[data-hs="' + it.hs + '"]'); if (!el) return;
+        let r = el.getBoundingClientRect(); if (r.width < 1 || r.height < 1) return;
+        let L = Math.max(r.left, rr.left), T = Math.max(r.top, rr.top), R = Math.min(r.right, rr.right), B = Math.min(r.bottom, rr.bottom);
+        let p = el.parentElement;
+        while (p && p !== root) { const cs = getComputedStyle(p); if (cs.overflowY !== 'visible' || cs.overflowX !== 'visible') { const pr = p.getBoundingClientRect(); L = Math.max(L, pr.left); T = Math.max(T, pr.top); R = Math.min(R, pr.right); B = Math.min(B, pr.bottom); } p = p.parentElement; }
+        if (R - L < 6 || B - T < 6) { present.push({ hs: it.hs, vis: false }); seen.add(it.hs); return; }
+        seen.add(it.hs);
+        present.push({ hs: it.hs, vis: true, box: { l: Math.round(L - sr.left), t: Math.round(T - sr.top), w: Math.round(R - L), h: Math.round(B - T) } });
+      });
+    }
+    const sig = JSON.stringify([present, Math.round(sr.width), Math.round(sr.height), key]);
+    if (sig !== this._sig) { this._sig = sig; this.setState({ present, stage: { w: sr.width, h: sr.height }, key }); }
+  }
+  scrollToEl(hs) {
+    const stage = this.stageRef.current; if (!stage) return;
+    const el = stage.querySelector('[data-hs="' + hs + '"]'); if (!el) return;
+    let p = el.parentElement;
+    while (p && !p.hasAttribute('data-mini-root') && !p.hasAttribute('data-admin-root')) {
+      const cs = getComputedStyle(p);
+      if ((cs.overflowY === 'auto' || cs.overflowY === 'scroll') && p.scrollHeight > p.clientHeight) {
+        const pr = p.getBoundingClientRect(), er = el.getBoundingClientRect();
+        const scale = pr.height / p.clientHeight || 1;
+        if (er.top < pr.top + 10 || er.bottom > pr.bottom - 10) p.scrollTop += (er.top - pr.top) / scale - p.clientHeight * 0.25;
+        break;
+      }
+      p = p.parentElement;
+    }
+  }
+  scrollPanelTo(hs) {
+    const pn = this.panelRef.current; if (!pn) return; const el = pn.querySelector('[data-item="' + hs + '"]'); if (!el) return;
+    const pr = pn.getBoundingClientRect(), er = el.getBoundingClientRect();
+    if (er.top < pr.top || er.bottom > pr.bottom) pn.scrollTop += er.top - pr.top - 80;
+  }
+  goStep(i) {
+    const S = window.SolStore, D = window.SolDocs; if (!S || !D) return;
+    i = Math.max(0, Math.min(D.TOUR.length - 1, i));
+    const t = D.TOUR[i];
+    try { t.setup(S); } catch (e) { console.error(e); }
+    S.emit();
+    this._stepKey = D.screenKey(S, t.tab);
+    this.setState({ step: i, applied: i, tab: t.tab, mode: 'tour', sel: t.focus || null, hover: null }, () => {
+      setTimeout(() => { if (t.focus) this.scrollToEl(t.focus); if (this.panelRef.current) this.panelRef.current.scrollTop = 0; }, 120);
+    });
+  }
+  chapterStart(ch) { const D = window.SolDocs; return D.TOUR.findIndex(t => t.ch === ch); }
+  openTab(tab) {
+    const D = window.SolDocs;
+    if ((tab === 'mini' || tab === 'admin') && this.state.mode === 'tour' && D) {
+      const cur = D.TOUR[this.state.step];
+      if (this.state.applied === -1 || cur.tab !== tab) { this.goStep(this.chapterStart(tab === 'mini' ? 'Mini program' : 'Administrador')); return; }
+    }
+    this.setState({ tab, sel: null, hover: null });
+  }
+  renderVals() {
+    const S = window.SolStore, D = window.SolDocs;
+    const st = this.state; const tab = st.tab || this.props.startTab || 'resumen';
+    const tabDefs = [['resumen', 'Resumen'], ['mini', 'Mini program'], ['admin', 'Administrador'], ['reglas', 'Reglas y glosario'], ['propuesta', 'Propuesta']];
+    const vals = {
+      tabs: tabDefs.map(([k, label]) => ({ label, go: () => this.openTab(k), bg: tab === k ? '#FFFFFF' : 'transparent', fg: tab === k ? '#0A0A0A' : '#666666', shadow: tab === k ? '0 1px 3px rgba(0,0,0,.12)' : 'none' })),
+      isResumen: tab === 'resumen', isReglas: tab === 'reglas', isPropuesta: tab === 'propuesta', isProto: tab === 'mini' || tab === 'admin', isMini: tab === 'mini', isAdmin: tab === 'admin',
+      stageRef: this.stageRef, panelRef: this.panelRef,
+      resetAll: () => { if (!S) return; S.reset(); this.setState({ applied: -1, step: 0, sel: null }); if (tab === 'mini' || tab === 'admin') { if (st.mode === 'tour') this.goStep(this.chapterStart(tab === 'mini' ? 'Mini program' : 'Administrador')); } }
+    };
+    if (!S || !D) return Object.assign(vals, { intro: [], parts: [], howto: [], testData: [], confirmList: [], estados: [], estadoCols: [], reglasMini: [], reglasAdmin: [], fuera: [], markers: [], items: [], chapters: [], index: [], sims: [], step: {}, scr: { rules: [], confirm: [] }, dev: {} });
+    const R = D.REF;
+    const stc = { Activo: ['#ebf7fc', '#0279ab'], Programado: ['#fff4e6', '#b85f00'], Vencido: ['#fdece4', '#b5480a'], Desactivado: ['#f1f1f1', '#555555'] };
+    Object.assign(vals, {
+      intro: R.intro,
+      parts: R.parts.map((p, i) => ({ eyebrow: 'Parte ' + (i + 1), title: p.title, text: p.text, list: p.list,
+        tour: () => this.goStep(this.chapterStart(p.k === 'mini' ? 'Mini program' : 'Administrador')),
+        free: () => { this.setState({ mode: 'free', tab: p.k, sel: null }); if (p.k === 'admin' && S.state.admin.screen === 'login' && !S.state.admin.me) {} } })),
+      howto: [
+        { n: '01', t: 'Recorrido guiado', d: 'Avanza con Siguiente y Anterior. Cada paso prepara su propio escenario y explica qué ves y por qué.' },
+        { n: '02', t: 'Explorar libre', d: 'Usa la app y el administrador como un usuario real. El panel describe la pantalla en la que estés.' },
+        { n: '03', t: 'Puntos numerados', d: 'Señalan cada botón y elemento. Toca un punto o un ítem del panel para resaltarlo. Se ocultan con el interruptor Puntos.' },
+        { n: '04', t: 'Todo está conectado', d: 'Lo que publiques o desactives en el administrador se refleja en el mini program, y cada compra llega a Órdenes.' }
+      ],
+      testData: [
+        { k: 'Ingreso al admin', v: 'laura.mendez@soltravel.com · SolTravel2026' },
+        { k: 'Usuario nuevo de TOKA', v: 'Mario Hernández: sin compras, TOKA entrega nombre, correo y celular.' },
+        { k: 'Usuario recurrente', v: 'Andrea Gómez Ruiz: datos guardados y dos compras en Mis viajes.' },
+        { k: 'Fecha del prototipo', v: f(S).long(S.TODAY) + '. Los estados por vigencia se calculan con esta fecha.' },
+        { k: 'Pasarela TOKA', v: 'Simulada con los botones Aprobar pago y Rechazar pago.' }
+      ],
+      confirmList: R.confirmar,
+      estadoCols: ['Estado', 'Condición', '¿Visible en el mini program?', 'Pestaña'],
+      estados: R.estados.map(e => ({ name: e[0], cond: e[1], vis: e[2], tab: e[3], bg: stc[e[0]][0], fg: stc[e[0]][1] })),
+      reglasMini: R.reglasMini, reglasAdmin: R.reglasAdmin, fuera: R.fuera
+    });
+    function f(S) { return S.fmt; }
+    if (!vals.isProto) return vals;
+
+    // device geometry
+    const W = st.stage.w || 1000, H = st.stage.h || 800;
+    const isA = tab === 'admin'; const iw = isA ? 1600 : 414, ih = isA ? 944 : 868; const pad = isA ? 36 : 48;
+    const s = Math.min(1, (W - pad * 2) / iw, (H - pad * 2 - (isA ? 0 : 0)) / ih);
+    const dw = iw * s, dh = ih * s;
+    vals.dev = { s: s.toFixed(4), w: dw + 'px', h: dh + 'px', innerW: iw + 'px', innerH: ih + 'px', left: Math.round((W - dw) / 2) + 'px', top: Math.round(Math.max(40, (H - dh) / 2)) + 'px' };
+    vals.stageLabel = isA ? 'Administrador web · escritorio' : 'Mini program en TOKA · móvil';
+    const a = S.state.admin;
+    vals.adminUrl = 'admin.soltravel.com/' + ({ login: 'ingreso', forgot: 'recuperar', reset: 'nueva-contrasena', resetok: 'nueva-contrasena', packages: 'paquetes', form: 'paquetes/editor', view: 'paquetes/' + (a.view || ''), orders: 'ordenes', order: 'ordenes/' + (a.order || ''), users: 'usuarios' })[a.screen];
+
+    // panel
+    const key = D.screenKey(S, this.app());
+    const doc = this.docFor(key);
+    const presentMap = {}; (st.present || []).forEach(p => presentMap[p.hs] = p);
+    const items = []; const seen = new Set();
+    this.allItems(key).forEach(it => { if (seen.has(it.hs) || !presentMap[it.hs]) return; seen.add(it.hs); items.push(it); });
+    const active = st.hover || st.sel;
+    vals.items = items.map((it, i) => ({ hs: it.hs, n: String(i + 1), t: it.t, d: it.d, bg: active === it.hs ? '#EEF1FE' : 'transparent', dot: presentMap[it.hs].vis ? '#0031EC' : '#A3A3A3',
+      pick: () => { this.setState({ sel: it.hs }); this.scrollToEl(it.hs); }, enter: () => this.setState({ hover: it.hs }), leave: () => this.setState({ hover: null }) }));
+    vals.noItems = items.length === 0;
+    vals.showMarkers = !!st.hs;
+    vals.markers = items.map((it, i) => ({ it, i, p: presentMap[it.hs] })).filter(o => o.p.vis).map(o => ({
+      n: String(o.i + 1), x: Math.max(4, o.p.box.l - 10) + 'px', y: Math.max(4, o.p.box.t - 10) + 'px', bg: active === o.it.hs ? '#0A0A0A' : '#0031EC', anim: active === o.it.hs ? 'hsPulse 1.2s ease-out infinite' : 'none',
+      pick: () => { this.setState({ sel: o.it.hs }); this.scrollPanelTo(o.it.hs); }, enter: () => this.setState({ hover: o.it.hs }), leave: () => this.setState({ hover: null }) }));
+    const hp = active && presentMap[active] && presentMap[active].vis ? presentMap[active].box : null;
+    vals.hlBox = hp ? { l: (hp.l - 4) + 'px', t: (hp.t - 4) + 'px', w: (hp.w + 8) + 'px', h: (hp.h + 8) + 'px' } : null;
+    vals.scr = { title: doc.title, intro: doc.intro, rules: doc.rules || [], confirm: doc.confirm || [] };
+    vals.hasRules = (doc.rules || []).length > 0; vals.hasConfirm = (doc.confirm || []).length > 0;
+    vals.scrEyebrow = (st.mode === 'tour' ? 'En esta pantalla · ' : '') + (doc.where || '');
+    vals.scrTitleSize = st.mode === 'tour' ? '19px' : '28px';
+    vals.isTour = st.mode === 'tour'; vals.isFree = st.mode !== 'tour';
+    vals.hsTrack = st.hs ? '#0031EC' : '#CFCFCF'; vals.hsKnob = st.hs ? '19px' : '3px'; vals.toggleHs = () => this.setState({ hs: !st.hs });
+    const on = '#FFFFFF', off = 'transparent';
+    Object.assign(vals, { modeTourBg: vals.isTour ? on : off, modeTourFg: vals.isTour ? '#0A0A0A' : '#666666', modeTourShadow: vals.isTour ? '0 1px 3px rgba(0,0,0,.12)' : 'none',
+      modeFreeBg: vals.isFree ? on : off, modeFreeFg: vals.isFree ? '#0A0A0A' : '#666666', modeFreeShadow: vals.isFree ? '0 1px 3px rgba(0,0,0,.12)' : 'none',
+      setTour: () => { const cur = D.TOUR[st.step]; if (st.applied === -1 || cur.tab !== tab) this.goStep(this.chapterStart(tab === 'mini' ? 'Mini program' : 'Administrador')); else this.setState({ mode: 'tour' }); },
+      setFree: () => this.setState({ mode: 'free', sel: null }) });
+
+    // tour
+    const T = D.TOUR; const t = T[st.step] || T[0];
+    const chList = ['Mini program', 'Administrador', 'Admin ↔ TOKA'];
+    vals.chapters = chList.map(c => { const onC = t.ch === c; return { label: c, bg: onC ? '#0A0A0A' : '#FFFFFF', fg: onC ? '#FFFFFF' : '#333333', ring: onC ? 'none' : 'inset 0 0 0 1px #DADADA', go: () => this.goStep(this.chapterStart(c)) }; });
+    const chSteps = T.filter(x => x.ch === t.ch); const idxInCh = chSteps.indexOf(t) + 1;
+    vals.step = t; vals.stepEyebrow = t.ch + ' · Paso ' + String(idxInCh).padStart(2, '0') + ' de ' + String(chSteps.length).padStart(2, '0');
+    vals.stepCount = (st.step + 1) + ' / ' + T.length;
+    vals.progress = ((st.step + 1) / T.length * 100).toFixed(1) + '%';
+    vals.prevStep = () => st.step > 0 && this.goStep(st.step - 1);
+    vals.nextStep = () => { if (st.step < T.length - 1) this.goStep(st.step + 1); else this.setState({ mode: 'free' }); };
+    vals.nextLabel = st.step < T.length - 1 ? 'Siguiente' : 'Explorar libre';
+    vals.prevRing = st.step > 0 ? '#0A0A0A' : '#DADADA'; vals.prevFg = st.step > 0 ? '#0A0A0A' : '#A3A3A3';
+    vals.diverged = vals.isTour && st.applied === st.step && this._stepKey && key !== this._stepKey && t.tab === tab;
+    vals.replayStep = () => this.goStep(st.step);
+
+    // free mode
+    vals.index = (D.INDEX[this.app()] || []).map(([label, k, run]) => { const onI = key === k; return { label, bg: onI ? '#0A0A0A' : '#FFFFFF', fg: onI ? '#FFFFFF' : '#0A0A0A', ring: onI ? 'none' : 'inset 0 0 0 1px #DADADA', go: () => { run(S); S.emit(); this.setState({ sel: null }); } }; });
+    vals.sims = (D.SIMS[this.app()] || []).map(sm => ({ label: sm.label, run: () => { sm.run(S); S.emit(); } }));
+    return vals;
+  }
+}
+
+</script>
+</body>
+</html>
